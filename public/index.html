@@ -4,2648 +4,1255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHANEL Spring 2027 | Timeless Circular Luxury</title>
+    <meta name="description" content="FIT SUNY Korea Fashion Business Management Final Project - CHANEL Spring 2027 Circular Luxury Strategy">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <style>
-        /* ====================================================
-           CSS VARIABLES - EDIT COLORS HERE
-           ==================================================== */
-        :root {
-            --color-black: #0a0a0a;
-            --color-ivory: #f8f6f1;
-            --color-pearl: #fdfcfa;
-            --color-beige: #e8e4dc;
-            --color-gray: #9a9a9a;
-            --color-gold: #c9a959;
-            --color-dark-gray: #2a2a2a;
-            
-            --font-serif: 'Cormorant Garamond', Georgia, serif;
-            --font-sans: 'Montserrat', Arial, sans-serif;
-            
-            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* ====================================================
-           BASE STYLES
-           ==================================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--color-ivory);
-            color: var(--color-black);
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        ::selection {
-            background-color: var(--color-gold);
-            color: var(--color-black);
-        }
-
-        /* ====================================================
-           TYPOGRAPHY
-           ==================================================== */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-serif);
-            font-weight: 400;
-            letter-spacing: 0.02em;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 8vw, 8rem);
-            line-height: 1.1;
-            font-weight: 300;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            line-height: 1.2;
-            margin-bottom: 2rem;
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            line-height: 1.3;
-            margin-bottom: 1.5rem;
-        }
-
-        h4 {
-            font-size: clamp(1.2rem, 2vw, 1.8rem);
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-            line-height: 1.8;
-            letter-spacing: 0.02em;
-        }
-
-        .label {
-            font-family: var(--font-sans);
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gray);
-            font-weight: 500;
-        }
-
-        /* ====================================================
-           NAVIGATION
-           ==================================================== */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(to bottom, rgba(248, 246, 241, 0.98), transparent);
-            transition: var(--transition-smooth);
-        }
-
-        nav.scrolled {
-            background: rgba(248, 246, 241, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-logo {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: var(--color-black);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: var(--color-black);
-            position: relative;
-            padding-bottom: 0.25rem;
-            transition: var(--transition-smooth);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: var(--color-gold);
-            transition: var(--transition-smooth);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .nav-toggle span {
-            width: 25px;
-            height: 1px;
-            background-color: var(--color-black);
-            transition: var(--transition-smooth);
-        }
-
-        /* ====================================================
-           HERO SECTION
-           ==================================================== */
-        #hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 6rem 2rem;
-            position: relative;
-            background: linear-gradient(135deg, var(--color-ivory) 0%, var(--color-pearl) 50%, var(--color-beige) 100%);
-        }
-
-        .hero-content {
-            max-width: 900px;
-            animation: fadeInUp 1.2s ease-out;
-        }
-
-        /* EDIT HERO TEXT HERE */
-        .hero-subtitle {
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            color: var(--color-gray);
-            margin-bottom: 2rem;
-        }
-
-        .hero-title {
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-tagline {
-            font-family: var(--font-serif);
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-style: italic;
-            color: var(--color-gold);
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
-        .hero-description {
-            max-width: 600px;
-            margin: 0 auto 4rem;
-            color: var(--color-dark-gray);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            cursor: pointer;
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator span {
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gray);
-        }
-
-        .scroll-indicator .line {
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, var(--color-gold), transparent);
-        }
-
-        /* ====================================================
-           SECTIONS BASE STYLES
-           ==================================================== */
-        section {
-            padding: 8rem 2rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-header .label {
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .divider {
-            width: 60px;
-            height: 1px;
-            background-color: var(--color-gold);
-            margin: 2rem auto;
-        }
-
-        /* ====================================================
-           COMPANY PROFILE SECTION
-           ==================================================== */
-        #company {
-            background-color: var(--color-pearl);
-        }
-
-        .profile-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 4rem;
-            margin-bottom: 5rem;
-        }
-
-        .profile-card {
-            padding: 3rem;
-            background-color: var(--color-ivory);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: var(--transition-smooth);
-        }
-
-        .profile-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-        }
-
-        .profile-card h4 {
-            font-family: var(--font-serif);
-            margin-bottom: 1.5rem;
-            color: var(--color-gold);
-        }
-
-        /* Financial Chart Placeholder */
-        .financial-section {
-            background-color: var(--color-ivory);
-            padding: 4rem;
-            margin-top: 4rem;
-        }
-
-        .chart-placeholder {
-            background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-pearl) 100%);
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 2rem 0;
-            border: 1px dashed var(--color-gray);
-        }
-
-        .chart-placeholder p {
-            color: var(--color-gray);
-            font-style: italic;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .stat-item .number {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            color: var(--color-gold);
-            display: block;
-        }
-
-        .stat-item .stat-label {
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-gray);
-            margin-top: 0.5rem;
-            display: block;
-        }
-
-        /* ====================================================
-           BRAND VISION SECTION
-           ==================================================== */
-        #vision {
-            background: var(--color-black);
-            color: var(--color-ivory);
-        }
-
-        #vision .section-header h2 {
-            color: var(--color-ivory);
-        }
-
-        #vision .divider {
-            background-color: var(--color-gold);
-        }
-
-        .vision-statement {
-            max-width: 900px;
-            margin: 0 auto 5rem;
-            text-align: center;
-        }
-
-        .vision-statement blockquote {
-            font-family: var(--font-serif);
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-style: italic;
-            line-height: 1.5;
-            color: var(--color-pearl);
-            margin-bottom: 2rem;
-        }
-
-        .vision-statement cite {
-            font-size: 0.8rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            font-style: normal;
-        }
-
-        .concept-keywords {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 4rem 0;
-        }
-
-        .keyword {
-            padding: 1rem 2rem;
-            border: 1px solid var(--color-gold);
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-ivory);
-            transition: var(--transition-smooth);
-        }
-
-        .keyword:hover {
-            background-color: var(--color-gold);
-            color: var(--color-black);
-        }
-
-        .vision-pillars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-top: 5rem;
-        }
-
-        .pillar {
-            text-align: center;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .pillar-number {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            color: var(--color-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .pillar h4 {
-            color: var(--color-ivory);
-            margin-bottom: 1rem;
-        }
-
-        .pillar p {
-            color: var(--color-gray);
-            font-size: 0.9rem;
-        }
-
-        /* ====================================================
-           MOODBOARD SECTION
-           ==================================================== */
-        #moodboard {
-            background-color: var(--color-ivory);
-        }
-
-        .moodboard-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 200px);
-            gap: 1rem;
-            margin-bottom: 5rem;
-        }
-
-        .mood-item {
-            position: relative;
-            overflow: hidden;
-            background-color: var(--color-beige);
-            cursor: pointer;
-        }
-
-        .mood-item:nth-child(1) {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .mood-item:nth-child(4) {
-            grid-column: span 2;
-        }
-
-        .mood-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
-        }
-
-        .mood-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .mood-item .mood-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition-smooth);
-        }
-
-        .mood-item:hover .mood-overlay {
-            opacity: 1;
-        }
-
-        .mood-item .mood-label {
-            color: var(--color-ivory);
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-
-        /* Image Placeholder Styles */
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-pearl) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-gray);
-            font-size: 0.8rem;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .image-placeholder span {
-            font-size: 0.65rem;
-            letter-spacing: 0.1em;
-            margin-top: 0.5rem;
-            opacity: 0.7;
-        }
-
-        /* Color Palette */
-        .color-palette {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .color-swatch {
-            text-align: center;
-        }
-
-        .swatch {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .swatch.ivory { background-color: var(--color-ivory); border: 1px solid var(--color-beige); }
-        .swatch.black { background-color: var(--color-black); }
-        .swatch.pearl { background-color: var(--color-pearl); border: 1px solid var(--color-beige); }
-        .swatch.beige { background-color: var(--color-beige); }
-        .swatch.gold { background-color: var(--color-gold); }
-
-        .color-swatch span {
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-gray);
-        }
-
-        /* ====================================================
-           CUSTOMER JOURNEY SECTION
-           ==================================================== */
-        #journey {
-            background: linear-gradient(to bottom, var(--color-pearl), var(--color-ivory));
-        }
-
-        .journey-timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .journey-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
-        }
-
-        .journey-stage {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .journey-stage:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .journey-content {
-            width: 45%;
-            padding: 2.5rem;
-            background-color: var(--color-pearl);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: var(--transition-smooth);
-        }
-
-        .journey-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .journey-stage:nth-child(odd) .journey-content {
-            margin-right: 5%;
-            text-align: right;
-        }
-
-        .journey-stage:nth-child(even) .journey-content {
-            margin-left: 5%;
-            text-align: left;
-        }
-
-        .journey-number {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background-color: var(--color-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            color: var(--color-black);
-            z-index: 1;
-        }
-
-        .journey-content h4 {
-            color: var(--color-gold);
-            margin-bottom: 1rem;
-        }
-
-        .journey-content p {
-            font-size: 0.9rem;
-            color: var(--color-dark-gray);
-        }
-
-        /* ====================================================
-           PRODUCTS SECTION
-           ==================================================== */
-        #products {
-            background-color: var(--color-ivory);
-        }
-
-        .product-categories {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .category-tab {
-            padding: 1rem 2rem;
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            background: none;
-            border: 1px solid var(--color-black);
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-
-        .category-tab:hover,
-        .category-tab.active {
-            background-color: var(--color-black);
-            color: var(--color-ivory);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        /* EDIT PRODUCT INFORMATION HERE */
-        .product-card {
-            background-color: var(--color-pearl);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            transition: var(--transition-smooth);
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-        }
-
-        .product-image {
-            height: 400px;
-            background-color: var(--color-beige);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-smooth);
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
-        }
-
-        .product-details {
-            padding: 2.5rem;
-        }
-
-        .product-category-label {
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 0.75rem;
-        }
-
-        .product-name {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .product-info {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .product-info-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.75rem;
-            font-size: 0.85rem;
-        }
-
-        .product-info-row .info-label {
-            color: var(--color-gray);
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .product-info-row .info-value {
-            color: var(--color-dark-gray);
-            text-align: right;
-        }
-
-        .product-sustainability {
-            margin-top: 1.5rem;
-            padding: 1.5rem;
-            background-color: var(--color-ivory);
-            font-size: 0.85rem;
-        }
-
-        .product-sustainability h5 {
-            font-family: var(--font-sans);
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 0.75rem;
-        }
-
-        /* ====================================================
-           SUPPLY CHAIN SECTION
-           ==================================================== */
-        #supply-chain {
-            background: var(--color-black);
-            color: var(--color-ivory);
-        }
-
-        #supply-chain .section-header h2 {
-            color: var(--color-ivory);
-        }
-
-        .supply-chain-flow {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .tier-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 5rem;
-            padding: 4rem;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-
-        .tier-card::after {
-            content: '';
-            position: absolute;
-            bottom: -3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1px;
-            height: 3rem;
-            background: linear-gradient(to bottom, var(--color-gold), transparent);
-        }
-
-        .tier-card:last-child::after {
-            display: none;
-        }
-
-        .tier-card:nth-child(even) {
-            direction: rtl;
-        }
-
-        .tier-card:nth-child(even) > * {
-            direction: ltr;
-        }
-
-        .tier-visual {
-            height: 300px;
-            background-color: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .tier-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .tier-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .tier-number {
-            font-family: var(--font-serif);
-            font-size: 4rem;
-            color: var(--color-gold);
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .tier-title {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            color: var(--color-ivory);
-            margin-bottom: 1.5rem;
-        }
-
-        .tier-details {
-            margin-top: 2rem;
-        }
-
-        .tier-detail-row {
-            display: flex;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .tier-detail-row .detail-label {
-            width: 40%;
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-        }
-
-        .tier-detail-row .detail-value {
-            width: 60%;
-            font-size: 0.9rem;
-            color: var(--color-pearl);
-        }
-
-        .tier-reference {
-            margin-top: 2rem;
-            padding: 1rem;
-            background: rgba(201, 169, 89, 0.1);
-            font-size: 0.8rem;
-            color: var(--color-gray);
-        }
-
-        .tier-reference strong {
-            color: var(--color-gold);
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        /* ====================================================
-           CIRCULAR ECONOMY SECTION
-           ==================================================== */
-        #circular {
-            background: linear-gradient(to bottom, var(--color-ivory), var(--color-pearl));
-        }
-
-        .circular-intro {
-            max-width: 800px;
-            margin: 0 auto 5rem;
-            text-align: center;
-        }
-
-        .circular-intro p {
-            font-size: 1.1rem;
-            color: var(--color-dark-gray);
-        }
-
-        .circular-pillars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 5rem;
-        }
-
-        .circular-pillar {
-            padding: 3rem;
-            background-color: var(--color-pearl);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: var(--transition-smooth);
-        }
-
-        .circular-pillar:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .circular-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--color-gold);
-        }
-
-        .circular-pillar h4 {
-            margin-bottom: 1rem;
-        }
-
-        .circular-pillar p {
-            font-size: 0.9rem;
-            color: var(--color-gray);
-        }
-
-        .quote-block {
-            max-width: 900px;
-            margin: 4rem auto;
-            padding: 4rem;
-            background-color: var(--color-black);
-            text-align: center;
-        }
-
-        .quote-block blockquote {
-            font-family: var(--font-serif);
-            font-size: clamp(1.3rem, 3vw, 2rem);
-            font-style: italic;
-            color: var(--color-ivory);
-            line-height: 1.6;
-        }
-
-        .quote-block cite {
-            display: block;
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            font-style: normal;
-        }
-
-        /* Statistics Grid */
-        .circular-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .circular-stat {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .circular-stat .stat-number {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            color: var(--color-gold);
-            display: block;
-        }
-
-        .circular-stat .stat-text {
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-gray);
-            margin-top: 0.5rem;
-        }
-
-        /* ====================================================
-           ABOUT / TEAM SECTION
-           ==================================================== */
-        #about {
-            background-color: var(--color-ivory);
-        }
-
-        .team-intro {
-            max-width: 700px;
-            margin: 0 auto 5rem;
-            text-align: center;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        /* EDIT TEAM MEMBER INFO HERE */
-        .team-member {
-            text-align: center;
-            transition: var(--transition-smooth);
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-        }
-
-        .member-photo {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: var(--color-beige);
-            border: 3px solid var(--color-pearl);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .member-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .member-name {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .member-keyword {
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--color-gold);
-            margin-bottom: 0.75rem;
-        }
-
-        .member-role {
-            font-size: 0.85rem;
-            color: var(--color-gray);
-            margin-bottom: 1rem;
-        }
-
-        .member-bio {
-            font-size: 0.85rem;
-            color: var(--color-dark-gray);
-            line-height: 1.7;
-        }
-
-        .member-linkedin {
-            display: inline-block;
-            margin-top: 1.5rem;
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-black);
-            text-decoration: none;
-            padding-bottom: 0.25rem;
-            border-bottom: 1px solid var(--color-gold);
-            transition: var(--transition-smooth);
-        }
-
-        .member-linkedin:hover {
-            color: var(--color-gold);
-        }
-
-        /* ====================================================
-           FOOTER
-           ==================================================== */
-        footer {
-            background-color: var(--color-black);
-            color: var(--color-ivory);
-            padding: 5rem 2rem 3rem;
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            letter-spacing: 0.3em;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-tagline {
-            font-family: var(--font-serif);
-            font-style: italic;
-            color: var(--color-gold);
-            margin-bottom: 3rem;
-        }
-
-        .footer-info {
-            font-size: 0.8rem;
-            color: var(--color-gray);
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-credits {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            color: var(--color-gray);
-        }
-
-        /* ====================================================
-           ANIMATIONS
-           ==================================================== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
-        }
-
-        /* ====================================================
-           RESPONSIVE STYLES
-           ==================================================== */
-        @media (max-width: 1024px) {
-            .tier-card {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .tier-card:nth-child(even) {
-                direction: ltr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem 1.5rem;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: var(--color-ivory);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition-smooth);
-            }
-
-            .nav-links.active {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .nav-links a {
-                font-size: 1rem;
-            }
-
-            .nav-toggle {
-                display: flex;
-                z-index: 1001;
-            }
-
-            .nav-toggle.active span:nth-child(1) {
-                transform: rotate(45deg) translate(4px, 4px);
-            }
-
-            .nav-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .nav-toggle.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(4px, -4px);
-            }
-
-            section {
-                padding: 5rem 1.5rem;
-            }
-
-            .moodboard-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: auto;
-            }
-
-            .moodboard-grid .mood-item:nth-child(1) {
-                grid-column: span 2;
-            }
-
-            .moodboard-grid .mood-item:nth-child(4) {
-                grid-column: span 1;
-            }
-
-            .journey-timeline::before {
-                left: 20px;
-            }
-
-            .journey-stage,
-            .journey-stage:nth-child(even) {
-                flex-direction: column;
-            }
-
-            .journey-content,
-            .journey-stage:nth-child(odd) .journey-content,
-            .journey-stage:nth-child(even) .journey-content {
-                width: 100%;
-                margin: 0 0 0 50px;
-                text-align: left;
-            }
-
-            .journey-number {
-                left: 20px;
-                transform: translateX(-50%);
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tier-visual {
-                height: 200px;
-            }
-        }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- ====================================================
          NAVIGATION
          ==================================================== -->
-    <nav id="navbar">
-        <a href="#hero" class="nav-logo">CHANEL</a>
-        <ul class="nav-links">
-            <li><a href="#company">Profile</a></li>
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#moodboard">Moodboard</a></li>
-            <li><a href="#journey">Journey</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#supply-chain">Supply Chain</a></li>
-            <li><a href="#circular">Circular</a></li>
-            <li><a href="#about">Team</a></li>
-        </ul>
-        <div class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">CHANEL</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#company">Profile</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#moodboard">Moodboard</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#supply-chain">Supply Chain</a></li>
+                <li><a href="#circular">Circular</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- ====================================================
-         HERO SECTION
+         1. HERO LANDING PAGE
          ==================================================== -->
-    <section id="hero">
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
+            <p class="hero-eyebrow">FIT SUNY Korea | Fashion Business Management</p>
+            
             <!-- EDIT HERO TEXT HERE -->
-            <p class="hero-subtitle">FIT SUNY Korea · Fashion Business Management · Spring 2027</p>
             <h1 class="hero-title">CHANEL</h1>
+            <p class="hero-subtitle">Spring 2027</p>
             <p class="hero-tagline">Timeless Circular Luxury</p>
-            <p class="hero-description">
-                Where heritage craftsmanship meets the future of conscious luxury. 
-                An exploration of emotional durability, circular elegance, and the 
-                enduring art of timeless fashion.
-            </p>
+            
+            <div class="hero-statement">
+                <p>Where heritage meets tomorrow. A vision of luxury that transcends seasons, 
+                embracing the eternal elegance of craftsmanship while pioneering a circular 
+                future. This is not merely fashion—it is a legacy woven with purpose.</p>
+            </div>
+            
+            <a href="#company" class="scroll-indicator">
+                <span>Discover</span>
+                <div class="scroll-arrow"></div>
+            </a>
         </div>
-        <a href="#company" class="scroll-indicator">
-            <span>Explore</span>
-            <div class="line"></div>
-        </a>
     </section>
 
     <!-- ====================================================
-         COMPANY PROFILE SECTION
+         2. COMPANY PROFILE
          ==================================================== -->
-    <section id="company">
-        <div class="section-container">
+    <section class="section" id="company">
+        <div class="container">
             <div class="section-header">
-                <span class="label">Company Profile</span>
-                <h2>The House of CHANEL</h2>
-                <div class="divider"></div>
+                <p class="section-eyebrow">Company Profile</p>
+                <h2 class="section-title">The House of CHANEL</h2>
             </div>
 
+            <!-- EDIT COMPANY HISTORY HERE -->
+            <div class="profile-intro">
+                <div class="profile-text">
+                    <h3>Brand History</h3>
+                    <p>Founded in 1910 by Gabrielle "Coco" Chanel in Paris, the House of CHANEL 
+                    revolutionized women's fashion by liberating them from corsets and introducing 
+                    timeless elegance through simplicity. From the iconic little black dress to 
+                    the legendary No. 5 perfume, CHANEL has remained synonymous with Parisian 
+                    sophistication for over a century.</p>
+                </div>
+                <div class="profile-text">
+                    <h3>Brand Identity</h3>
+                    <p>CHANEL embodies the perfect balance of tradition and modernity. The interlocking 
+                    CC logo represents not just a brand, but a philosophy of refined luxury, 
+                    impeccable craftsmanship, and unapologetic femininity. Each piece carries 
+                    the DNA of Mademoiselle Chanel's revolutionary spirit.</p>
+                </div>
+            </div>
+
+            <!-- Brand Positioning Grid -->
             <div class="profile-grid">
-                <!-- EDIT COMPANY PROFILE CARDS HERE -->
-                <div class="profile-card">
-                    <h4>Brand History</h4>
-                    <p>Founded in 1910 by Gabrielle "Coco" Chanel in Paris, the House of CHANEL revolutionized women's fashion by introducing simplicity, comfort, and understated elegance. From the iconic little black dress to the timeless Chanel No. 5 perfume, the brand has continuously defined modern luxury while honoring its rich heritage.</p>
-                </div>
-
-                <div class="profile-card">
-                    <h4>Brand Identity</h4>
-                    <p>CHANEL embodies the essence of Parisian elegance—bold yet refined, classic yet innovative. The interlocking CC logo represents not just a brand, but a philosophy of liberation, sophistication, and timeless style that transcends generations.</p>
-                </div>
-
+                <!-- EDIT TARGET CUSTOMER HERE -->
                 <div class="profile-card">
                     <h4>Target Customer</h4>
-                    <p>The modern CHANEL woman is confident, cultured, and conscious. She values quality over quantity, heritage over trends, and seeks pieces that become part of her personal legacy. Age range: 25-65, with high disposable income and appreciation for artisanal craftsmanship.</p>
+                    <p>Sophisticated, independent women aged 30-55 who value timeless elegance 
+                    over fleeting trends. They seek investment pieces that transcend seasons 
+                    and appreciate the heritage of true luxury craftsmanship.</p>
                 </div>
 
+                <!-- EDIT BRAND POSITIONING HERE -->
                 <div class="profile-card">
                     <h4>Brand Positioning</h4>
-                    <p>Positioned at the apex of luxury fashion, CHANEL occupies a unique space where haute couture tradition meets contemporary relevance. The brand maintains exclusivity through controlled distribution, exceptional craftsmanship, and an unwavering commitment to quality.</p>
+                    <p>Ultra-luxury positioning at the pinnacle of the fashion hierarchy. 
+                    CHANEL competes with Hermes and Louis Vuitton while maintaining its 
+                    unique heritage of liberating, elegant femininity.</p>
                 </div>
 
+                <!-- EDIT RETAIL STRATEGY HERE -->
                 <div class="profile-card">
                     <h4>Retail Strategy</h4>
-                    <p>CHANEL operates through a carefully curated network of standalone boutiques in prime locations worldwide. The brand maintains strict control over distribution, eschewing third-party department store partnerships to preserve brand integrity and customer experience.</p>
+                    <p>Exclusively operated boutiques in prime luxury locations worldwide. 
+                    No department store concessions. Controlled distribution preserves 
+                    brand equity and customer experience.</p>
                 </div>
 
+                <!-- EDIT GLOBAL PRESENCE HERE -->
                 <div class="profile-card">
                     <h4>Global Presence</h4>
-                    <p>With flagship boutiques on the world's most prestigious shopping streets—from Rue Cambon in Paris to Fifth Avenue in New York—CHANEL maintains a truly global presence while preserving its distinctly Parisian identity.</p>
+                    <p><strong>Worldwide:</strong> 310+ boutiques across 40+ countries<br>
+                    <strong>USA:</strong> 45+ boutiques in major metropolitan areas<br>
+                    <strong>Key Markets:</strong> Paris, New York, Tokyo, Shanghai, Dubai</p>
                 </div>
             </div>
 
             <!-- Financial Performance Section -->
             <div class="financial-section">
-                <h3 style="text-align: center; margin-bottom: 2rem;">Financial Performance</h3>
+                <h3 class="financial-title">Financial Performance</h3>
                 
                 <!-- EDIT FINANCIAL DATA HERE -->
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <!-- EDIT: Number of US Stores -->
-                        <span class="number">150+</span>
-                        <span class="stat-label">Stores in USA</span>
+                <div class="financial-grid">
+                    <div class="financial-card">
+                        <p class="financial-year">2024</p>
+                        <p class="financial-amount">$19.7B</p>
+                        <p class="financial-label">Revenue</p>
                     </div>
-                    <div class="stat-item">
-                        <!-- EDIT: Number of Global Stores -->
-                        <span class="number">500+</span>
-                        <span class="stat-label">Global Boutiques</span>
+                    <div class="financial-card">
+                        <p class="financial-year">2025</p>
+                        <p class="financial-amount">$21.2B</p>
+                        <p class="financial-label">Revenue</p>
                     </div>
-                    <div class="stat-item">
-                        <!-- EDIT: Market Position -->
-                        <span class="number">#2</span>
-                        <span class="stat-label">Global Luxury Brand</span>
-                    </div>
-                    <div class="stat-item">
-                        <!-- EDIT: Founded Year -->
-                        <span class="number">1910</span>
-                        <span class="stat-label">Year Founded</span>
+                    <div class="financial-card">
+                        <p class="financial-year">2026</p>
+                        <p class="financial-amount">$23.1B</p>
+                        <p class="financial-label">Projected</p>
                     </div>
                 </div>
 
-                <!-- EDIT CHART PLACEHOLDER - Replace with actual chart or financial visualization -->
+                <!-- Chart Placeholder -->
                 <div class="chart-placeholder">
-                    <p>Financial Chart Placeholder</p>
-                    <span>Insert revenue chart for 2024, 2025, 2026</span>
-                </div>
-
-                <!-- EDIT FINANCIAL FIGURES HERE -->
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="number">$XX.X B</span>
-                        <span class="stat-label">2024 Revenue</span>
+                    <div class="chart-bars">
+                        <div class="chart-bar" data-height="70">
+                            <div class="chart-bar-fill"></div>
+                            <span class="chart-label">2024</span>
+                        </div>
+                        <div class="chart-bar" data-height="82">
+                            <div class="chart-bar-fill"></div>
+                            <span class="chart-label">2025</span>
+                        </div>
+                        <div class="chart-bar" data-height="95">
+                            <div class="chart-bar-fill"></div>
+                            <span class="chart-label">2026</span>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="number">$XX.X B</span>
-                        <span class="stat-label">2025 Revenue</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">$XX.X B</span>
-                        <span class="stat-label">2026 Revenue (Est.)</span>
-                    </div>
+                    <p class="chart-caption">Revenue Growth (in billions USD)</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         BRAND VISION SECTION
+         3. SPRING 2027 SEASONAL BRAND VISION
          ==================================================== -->
-    <section id="vision">
-        <div class="section-container">
+    <section class="section section-dark" id="vision">
+        <div class="container">
             <div class="section-header">
-                <span class="label" style="color: var(--color-gold);">Spring 2027</span>
-                <h2>Seasonal Brand Vision</h2>
-                <div class="divider"></div>
+                <p class="section-eyebrow">Spring 2027</p>
+                <h2 class="section-title">Seasonal Brand Vision</h2>
             </div>
 
             <!-- EDIT VISION STATEMENT HERE -->
             <div class="vision-statement">
                 <blockquote>
-                    "Luxury that lives beyond seasons. In an era of rapid consumption, 
-                    we choose permanence. Each piece is not merely worn—it is inherited, 
-                    cherished, and passed forward as testament to enduring craft."
+                    "Luxury that lives beyond seasons."
                 </blockquote>
-                <cite>— Spring 2027 Vision Statement</cite>
+                <p>Spring 2027 marks CHANEL's definitive step into circular luxury—where every 
+                stitch tells a story of heritage, every material speaks of responsibility, 
+                and every piece is designed to become tomorrow's heirloom.</p>
             </div>
 
-            <!-- EDIT CONCEPT KEYWORDS HERE -->
-            <div class="concept-keywords">
+            <!-- Concept Keywords -->
+            <div class="vision-keywords">
+                <!-- EDIT KEYWORDS HERE -->
                 <span class="keyword">Emotional Durability</span>
-                <span class="keyword">Circular Elegance</span>
                 <span class="keyword">Timeless Craft</span>
-                <span class="keyword">Heritage Innovation</span>
-                <span class="keyword">Conscious Luxury</span>
+                <span class="keyword">Circular Heritage</span>
+                <span class="keyword">Conscious Elegance</span>
                 <span class="keyword">Legacy Design</span>
             </div>
 
-            <!-- EDIT VISION PILLARS HERE -->
-            <div class="vision-pillars">
-                <div class="pillar">
-                    <div class="pillar-number">01</div>
+            <!-- Strategic Vision Grid -->
+            <div class="vision-grid">
+                <!-- EDIT CONSUMER NEEDS HERE -->
+                <div class="vision-card">
                     <h4>Consumer Emotional Needs</h4>
-                    <p>Today's luxury consumer seeks meaning beyond material possession. They desire pieces that tell stories, honor traditions, and connect them to something greater than fleeting trends.</p>
+                    <p>Today's luxury consumer seeks meaning beyond materialism. They desire 
+                    pieces that carry stories, appreciate with time, and align with their 
+                    values of sustainability without sacrificing beauty or status.</p>
                 </div>
-                <div class="pillar">
-                    <div class="pillar-number">02</div>
+
+                <!-- EDIT TREND DIRECTION HERE -->
+                <div class="vision-card">
                     <h4>Trend Direction</h4>
-                    <p>Moving away from seasonal obsolescence toward investment pieces designed for decades of wear. Quiet luxury, archival references, and artisanal appreciation define the new era.</p>
+                    <p>Movement away from seasonal obsolescence toward investment dressing. 
+                    Quiet luxury aesthetic continues to dominate, with emphasis on 
+                    craftsmanship, provenance, and timeless silhouettes.</p>
                 </div>
-                <div class="pillar">
-                    <div class="pillar-number">03</div>
-                    <h4>Fashion & Lifestyle</h4>
-                    <p>The intersection of heritage craftsmanship and modern sustainability creates a new luxury paradigm—where owning less but owning better becomes the ultimate expression of refined taste.</p>
+
+                <!-- EDIT LIFESTYLE INSPIRATION HERE -->
+                <div class="vision-card">
+                    <h4>Fashion &amp; Lifestyle Inspiration</h4>
+                    <p>The modern flaneuse—cultured, curious, conscious. She curates her 
+                    wardrobe like an art collection, values experiences over excess, 
+                    and sees her style as an extension of her ethics.</p>
                 </div>
-                <div class="pillar">
-                    <div class="pillar-number">04</div>
-                    <h4>Luxury Positioning</h4>
-                    <p>CHANEL Spring 2027 positions itself at the forefront of circular luxury—proving that sustainability and exclusivity not only coexist but elevate one another to new heights.</p>
+
+                <!-- EDIT POSITIONING STRATEGY HERE -->
+                <div class="vision-card">
+                    <h4>Luxury Positioning Strategy</h4>
+                    <p>Leading the industry in demonstrating that true luxury is inherently 
+                    sustainable. Positioning circular practices as the ultimate expression 
+                    of exclusivity and long-term value.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         MOODBOARD SECTION
+         4. COLOR BOARD / MOODBOARD SECTION
          ==================================================== -->
-    <section id="moodboard">
-        <div class="section-container">
+    <section class="section" id="moodboard">
+        <div class="container">
             <div class="section-header">
-                <span class="label">Creative Direction</span>
-                <h2>Color Board & Moodboard</h2>
-                <div class="divider"></div>
-            </div>
-
-            <!--
-            ====================================================
-            IMAGE FOLDER STRUCTURE:
-            images/
-              └── moodboard/
-                    ├── mood-1.jpg (Runway Inspiration - Large)
-                    ├── mood-2.jpg (Tweed Textures)
-                    ├── mood-3.jpg (Atelier Imagery)
-                    ├── mood-4.jpg (Archival Fashion - Wide)
-                    ├── mood-5.jpg (Luxury Interiors)
-                    ├── mood-6.jpg (Seasonal Inspiration)
-                    ├── mood-7.jpg (Heritage Details)
-                    └── mood-8.jpg (Material Studies)
-            ====================================================
-            -->
-
-            <!-- EDIT MOODBOARD IMAGES HERE -->
-            <div class="moodboard-grid">
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 1 - Runway Inspiration -->
-                    <div class="image-placeholder">
-                        Runway Inspiration
-                        <span>images/moodboard/mood-1.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Runway Inspiration</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 2 - Tweed Textures -->
-                    <div class="image-placeholder">
-                        Tweed Textures
-                        <span>images/moodboard/mood-2.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Tweed Textures</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 3 - Atelier Imagery -->
-                    <div class="image-placeholder">
-                        Atelier Imagery
-                        <span>images/moodboard/mood-3.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Atelier Imagery</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 4 - Archival Fashion -->
-                    <div class="image-placeholder">
-                        Archival Fashion
-                        <span>images/moodboard/mood-4.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Archival Fashion</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 5 - Luxury Interiors -->
-                    <div class="image-placeholder">
-                        Luxury Interiors
-                        <span>images/moodboard/mood-5.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Luxury Interiors</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 6 - Seasonal Details -->
-                    <div class="image-placeholder">
-                        Seasonal Details
-                        <span>images/moodboard/mood-6.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Seasonal Details</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 7 - Heritage -->
-                    <div class="image-placeholder">
-                        Heritage Details
-                        <span>images/moodboard/mood-7.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Heritage Details</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <!-- INSERT MOODBOARD IMAGE 8 - Materials -->
-                    <div class="image-placeholder">
-                        Material Studies
-                        <span>images/moodboard/mood-8.jpg</span>
-                    </div>
-                    <div class="mood-overlay">
-                        <span class="mood-label">Material Studies</span>
-                    </div>
-                </div>
+                <p class="section-eyebrow">Creative Direction</p>
+                <h2 class="section-title">Moodboard</h2>
             </div>
 
             <!-- Color Palette -->
-            <h3 style="text-align: center; margin-bottom: 3rem;">Spring 2027 Color Palette</h3>
             <div class="color-palette">
-                <div class="color-swatch">
-                    <div class="swatch ivory"></div>
-                    <span>Ivory</span>
+                <h3 class="palette-title">Spring 2027 Palette</h3>
+                <div class="colors">
+                    <!-- EDIT COLORS HERE -->
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #FFFFF0;"></div>
+                        <p>Ivory</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #1A1A1A;"></div>
+                        <p>Noir</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #F5F5F5;"></div>
+                        <p>Pearl</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #D4C4B0;"></div>
+                        <p>Soft Beige</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background: #C9A962;"></div>
+                        <p>Vintage Gold</p>
+                    </div>
                 </div>
-                <div class="color-swatch">
-                    <div class="swatch black"></div>
-                    <span>Noir</span>
+            </div>
+
+            <!-- Moodboard Grid -->
+            <!-- 
+                IMAGE FOLDER STRUCTURE:
+                images/
+                └── moodboard/
+                    ├── mood-1.jpg (runway inspiration)
+                    ├── mood-2.jpg (fashion textures)
+                    ├── mood-3.jpg (tweed inspiration)
+                    ├── mood-4.jpg (atelier imagery)
+                    ├── mood-5.jpg (archival photography)
+                    └── mood-6.jpg (luxury interiors)
+            -->
+            <div class="moodboard-grid">
+                <!-- EDIT MOODBOARD IMAGES HERE -->
+                <div class="mood-item mood-large">
+                    <div class="mood-placeholder">
+                        <p>Runway Inspiration</p>
+                        <span>images/moodboard/mood-1.jpg</span>
+                    </div>
+                    <!-- Replace placeholder div with: <img src="images/moodboard/mood-1.jpg" alt="Runway inspiration"> -->
                 </div>
-                <div class="color-swatch">
-                    <div class="swatch pearl"></div>
-                    <span>Pearl</span>
+                <div class="mood-item">
+                    <div class="mood-placeholder">
+                        <p>Tweed Textures</p>
+                        <span>images/moodboard/mood-2.jpg</span>
+                    </div>
                 </div>
-                <div class="color-swatch">
-                    <div class="swatch beige"></div>
-                    <span>Soft Beige</span>
+                <div class="mood-item">
+                    <div class="mood-placeholder">
+                        <p>Atelier Craft</p>
+                        <span>images/moodboard/mood-3.jpg</span>
+                    </div>
                 </div>
-                <div class="color-swatch">
-                    <div class="swatch gold"></div>
-                    <span>Vintage Gold</span>
+                <div class="mood-item mood-tall">
+                    <div class="mood-placeholder">
+                        <p>Archival Beauty</p>
+                        <span>images/moodboard/mood-4.jpg</span>
+                    </div>
+                </div>
+                <div class="mood-item">
+                    <div class="mood-placeholder">
+                        <p>Heritage Details</p>
+                        <span>images/moodboard/mood-5.jpg</span>
+                    </div>
+                </div>
+                <div class="mood-item">
+                    <div class="mood-placeholder">
+                        <p>Luxury Spaces</p>
+                        <span>images/moodboard/mood-6.jpg</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         CUSTOMER JOURNEY SECTION
+         5. CUSTOMER JOURNEY EXPERIENCE
          ==================================================== -->
-    <section id="journey">
-        <div class="section-container">
+    <section class="section section-alt" id="journey">
+        <div class="container">
             <div class="section-header">
-                <span class="label">Experience</span>
-                <h2>Customer Journey</h2>
-                <div class="divider"></div>
-                <p style="max-width: 600px; margin: 2rem auto 0; text-align: center; color: var(--color-gray);">
-                    Luxury ownership as a lifelong relationship—from first desire to cherished legacy.
-                </p>
+                <p class="section-eyebrow">Experience</p>
+                <h2 class="section-title">Customer Journey</h2>
+                <p class="section-subtitle">Luxury ownership as a lifelong relationship</p>
             </div>
 
-            <!-- EDIT CUSTOMER JOURNEY STAGES HERE -->
             <div class="journey-timeline">
+                <!-- EDIT JOURNEY STAGES HERE -->
+                
                 <div class="journey-stage">
-                    <div class="journey-content">
+                    <div class="stage-number">01</div>
+                    <div class="stage-content">
                         <h4>Discovery</h4>
-                        <p>The journey begins with inspiration—a glimpse in a magazine, a moment on the runway, or the elegant presence of a CHANEL piece in the world. Desire is kindled through storytelling, heritage, and the promise of timeless beauty.</p>
+                        <p>First encounter with the maison through editorial, cultural moments, 
+                        or heritage storytelling. The seed of desire is planted through aspiration 
+                        and emotional connection to the brand's legacy.</p>
                     </div>
-                    <div class="journey-number">1</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
+                    <div class="stage-number">02</div>
+                    <div class="stage-content">
                         <h4>Desire</h4>
-                        <p>Research deepens the connection. The customer explores craftsmanship stories, understands the artisanal process, and recognizes the investment value. This is not impulse—it is considered appreciation.</p>
+                        <p>Deep engagement with collections, understanding the craftsmanship, 
+                        provenance, and circular story behind each piece. Research into 
+                        investment value and timeless appeal.</p>
                     </div>
-                    <div class="journey-number">2</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
+                    <div class="stage-number">03</div>
+                    <div class="stage-content">
                         <h4>Boutique Experience</h4>
-                        <p>Entering a CHANEL boutique is entering a world apart. Personalized consultation, private viewings, and the ceremonial unveiling of pieces transform shopping into sacred ritual. Every detail honors the customer's time and taste.</p>
+                        <p>Intimate, personalized service in a temple of luxury. Expert advisors 
+                        share the heritage and care instructions, establishing the foundation 
+                        for lifelong product stewardship.</p>
                     </div>
-                    <div class="journey-number">3</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
+                    <div class="stage-number">04</div>
+                    <div class="stage-content">
                         <h4>Purchase</h4>
-                        <p>The acquisition is celebrated with signature packaging, certificates of authenticity, and the beginning of a documented ownership history. This moment marks not an end, but a beginning.</p>
+                        <p>Acquisition becomes ritual. Elegant packaging, certificate of 
+                        authenticity, and introduction to care services. The beginning 
+                        of a relationship, not a transaction.</p>
                     </div>
-                    <div class="journey-number">4</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
+                    <div class="stage-number">05</div>
+                    <div class="stage-content">
                         <h4>Ownership</h4>
-                        <p>Years of wear build emotional connection. The piece becomes part of life's milestones—celebrations, achievements, and treasured memories woven into its fabric. Ownership deepens with time.</p>
+                        <p>Living with luxury. The piece becomes part of personal narrative, 
+                        worn with intention, cared for with respect. Emotional attachment 
+                        deepens with each memory created.</p>
                     </div>
-                    <div class="journey-number">5</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
-                        <h4>Repair & Care</h4>
-                        <p>CHANEL's lifetime care services ensure each piece maintains its integrity for generations. Expert artisans restore, refresh, and preserve—extending the life and beauty of every creation.</p>
+                    <div class="stage-number">06</div>
+                    <div class="stage-content">
+                        <h4>Repair &amp; Care</h4>
+                        <p>Access to expert artisan services ensures longevity. Restoration 
+                        and maintenance preserve beauty and value, demonstrating the 
+                        brand's commitment to circular excellence.</p>
                     </div>
-                    <div class="journey-number">6</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
-                        <h4>Resale & Vintage</h4>
-                        <p>The circular journey continues as pieces enter the vintage market, finding new admirers who appreciate their history. Value is preserved, sometimes enhanced, proving true luxury transcends time.</p>
+                    <div class="stage-number">07</div>
+                    <div class="stage-content">
+                        <h4>Resale / Vintage</h4>
+                        <p>When ready, pieces enter the secondary market with documented 
+                        provenance. Authenticated resale extends the product lifecycle 
+                        while retaining significant value.</p>
                     </div>
-                    <div class="journey-number">7</div>
                 </div>
 
                 <div class="journey-stage">
-                    <div class="journey-content">
+                    <div class="stage-number">08</div>
+                    <div class="stage-content">
                         <h4>Legacy</h4>
-                        <p>The ultimate destination: inheritance. A CHANEL piece passed from generation to generation carries stories, memories, and emotional significance that no new purchase can replicate. This is eternal luxury.</p>
+                        <p>Heirloom status achieved. Pieces passed between generations carry 
+                        stories and memories. True luxury transcends the individual to 
+                        become family heritage.</p>
                     </div>
-                    <div class="journey-number">8</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         PRODUCTS SECTION
+         6. PRODUCT CATEGORY & STYLE SHEETS
          ==================================================== -->
-    <section id="products">
-        <div class="section-container">
+    <section class="section" id="products">
+        <div class="container">
             <div class="section-header">
-                <span class="label">Collection</span>
-                <h2>Product Categories & Style Sheets</h2>
-                <div class="divider"></div>
+                <p class="section-eyebrow">Collection</p>
+                <h2 class="section-title">Product Style Sheets</h2>
+                <p class="section-subtitle">Spring 2027 Collection Overview</p>
             </div>
 
-            <!-- Category Navigation -->
-            <div class="product-categories">
-                <button class="category-tab active">Ready-to-Wear</button>
-                <button class="category-tab">Bags</button>
-                <button class="category-tab">Shoes</button>
-                <button class="category-tab">Accessories</button>
-                <button class="category-tab">Beauty</button>
+            <!-- Product Category Tabs -->
+            <div class="product-tabs">
+                <button class="tab-btn active" data-category="rtw">Ready-to-Wear</button>
+                <button class="tab-btn" data-category="bags">Bags</button>
+                <button class="tab-btn" data-category="shoes">Shoes</button>
+                <button class="tab-btn" data-category="accessories">Accessories</button>
+                <button class="tab-btn" data-category="beauty">Beauty</button>
             </div>
 
-            <!--
-            ====================================================
-            IMAGE FOLDER STRUCTURE:
-            images/
-              └── products/
-                    ├── product-1.jpg
-                    ├── product-2.jpg
-                    ├── product-3.jpg
-                    ├── product-4.jpg
-                    ├── product-5.jpg
-                    └── product-6.jpg
-            ====================================================
+            <!-- 
+                IMAGE FOLDER STRUCTURE:
+                images/
+                └── products/
+                    ├── rtw-1.jpg
+                    ├── rtw-2.jpg
+                    ├── bag-1.jpg
+                    ├── shoe-1.jpg
+                    ├── acc-1.jpg
+                    └── beauty-1.jpg
             -->
 
-            <!-- EDIT PRODUCT INFORMATION HERE -->
-            <div class="products-grid">
-                
-                <!-- Product Card 1 -->
-                <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Product Image 1
-                            <span>images/products/product-1.jpg</span>
+            <!-- Ready-to-Wear Products -->
+            <div class="product-category active" id="cat-rtw">
+                <div class="product-grid">
+                    
+                    <!-- PRODUCT 1 - EDIT HERE -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/rtw-1.jpg</span>
+                            </div>
+                            <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
+                            <!-- Replace placeholder with: <img src="images/products/rtw-1.jpg" alt="Classic Tweed Jacket"> -->
+                        </div>
+                        <div class="product-details">
+                            <!-- EDIT PRODUCT INFORMATION HERE -->
+                            <h4 class="product-name">Classic Tweed Jacket</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-RTW-S27-001</p>
+                                <p><strong>Classification:</strong> Outerwear / Jacket</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Fabric:</strong> 65% Wool, 25% Cotton, 10% Silk — Lesage Tweed</p>
+                                <p><strong>Color Story:</strong> Ivory &amp; Noir with Gold Thread</p>
+                                <p><strong>Price Point:</strong> $8,500 - $12,000</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> Core luxury client seeking investment piece</p>
+                                <p><strong>Trend Inspiration:</strong> Quiet luxury, heritage revival</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> Traceable Scottish wool, artisan woven</p>
+                                <p><strong>Circular Strategy:</strong> Lifetime repair service, resale authentication</p>
+                                <p><strong>Supply Chain:</strong> Tier 4 Scotland → Tier 1 Paris Atelier</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-details">
-                        <!-- EDIT PRODUCT 1 DETAILS HERE -->
-                        <p class="product-category-label">Ready-to-Wear</p>
-                        <h4 class="product-name">Classic Tweed Jacket</h4>
-                        <p>The quintessential CHANEL silhouette reimagined with recycled tweed fibers and sustainable silk lining. Timeless construction designed to transcend decades.</p>
-                        
-                        <div class="product-info">
-                            <div class="product-info-row">
-                                <span class="info-label">Style Number</span>
-                                <span class="info-value">P77XXX V66XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Classification</span>
-                                <span class="info-value">Outerwear / Jacket</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Fabric</span>
-                                <span class="info-value">Recycled Wool Tweed, Silk Lining</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Color Story</span>
-                                <span class="info-value">Ivory / Noir / Gold Thread</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Price Point</span>
-                                <span class="info-value">$X,XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Target Customer</span>
-                                <span class="info-value">Investment Collector</span>
+
+                    <!-- PRODUCT 2 - EDIT HERE -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/rtw-2.jpg</span>
                             </div>
                         </div>
-                        
-                        <div class="product-sustainability">
-                            <h5>Circular Economy Notes</h5>
-                            <p>Designed for lifetime wear with reinforced seams and replaceable buttons. Full repair services available. Vintage market value retention: 85%+</p>
+                        <div class="product-details">
+                            <h4 class="product-name">Little Black Dress</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-RTW-S27-002</p>
+                                <p><strong>Classification:</strong> Dresses / Evening</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Fabric:</strong> 100% Silk Crepe — Italian Mill</p>
+                                <p><strong>Color Story:</strong> Timeless Noir</p>
+                                <p><strong>Price Point:</strong> $6,200 - $8,500</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> Fashion-forward professional</p>
+                                <p><strong>Trend Inspiration:</strong> Minimalist elegance, modern femininity</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> GOTS certified organic silk</p>
+                                <p><strong>Circular Strategy:</strong> Alterations program, heritage archive</p>
+                                <p><strong>Supply Chain:</strong> Tier 4 Italy → Tier 1 Paris</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCT 3 - DUPLICATE THIS CARD FOR MORE PRODUCTS -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/rtw-3.jpg</span>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h4 class="product-name">[Product Name]</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-RTW-S27-XXX</p>
+                                <p><strong>Classification:</strong> [Category]</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Fabric:</strong> [Composition]</p>
+                                <p><strong>Color Story:</strong> [Color Name]</p>
+                                <p><strong>Price Point:</strong> $X,XXX</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> [Description]</p>
+                                <p><strong>Trend Inspiration:</strong> [Trends]</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> [Details]</p>
+                                <p><strong>Circular Strategy:</strong> [Strategy]</p>
+                                <p><strong>Supply Chain:</strong> [Notes]</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Product Card 2 -->
-                <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Product Image 2
-                            <span>images/products/product-2.jpg</span>
-                        </div>
-                    </div>
-                    <div class="product-details">
-                        <!-- EDIT PRODUCT 2 DETAILS HERE -->
-                        <p class="product-category-label">Bags</p>
-                        <h4 class="product-name">Classic Flap Bag</h4>
-                        <p>The iconic 2.55 reinterpreted with responsibly sourced leather and recycled gold-tone hardware. A piece designed to be inherited.</p>
-                        
-                        <div class="product-info">
-                            <div class="product-info-row">
-                                <span class="info-label">Style Number</span>
-                                <span class="info-value">A01112 Y01864</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Classification</span>
-                                <span class="info-value">Handbag / Shoulder</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Material</span>
-                                <span class="info-value">Lambskin, Recycled Metal</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Color Story</span>
-                                <span class="info-value">Classic Black / Gold HW</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Price Point</span>
-                                <span class="info-value">$XX,XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Target Customer</span>
-                                <span class="info-value">Heritage Collector</span>
+            <!-- Bags Products -->
+            <div class="product-category" id="cat-bags">
+                <div class="product-grid">
+                    <!-- BAGS PRODUCT 1 - EDIT HERE -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/bag-1.jpg</span>
                             </div>
                         </div>
-                        
-                        <div class="product-sustainability">
-                            <h5>Circular Economy Notes</h5>
-                            <p>Lifetime authentication service. Hardware refinishing available. Pre-owned market appreciation: 3-5% annually.</p>
+                        <div class="product-details">
+                            <h4 class="product-name">Classic Flap Bag</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-BAG-S27-001</p>
+                                <p><strong>Classification:</strong> Handbags / Shoulder</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Material:</strong> Lambskin Leather — French Tannery</p>
+                                <p><strong>Color Story:</strong> Caviar Black with Gold Hardware</p>
+                                <p><strong>Price Point:</strong> $10,200 - $11,500</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> Investment buyer, collector</p>
+                                <p><strong>Trend Inspiration:</strong> Heritage icon, timeless investment</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> LWG Gold-rated leather</p>
+                                <p><strong>Circular Strategy:</strong> Lifetime spa service, authentication</p>
+                                <p><strong>Supply Chain:</strong> Tier 4 France → Tier 1 Italy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Product Card 3 -->
-                <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Product Image 3
-                            <span>images/products/product-3.jpg</span>
-                        </div>
-                    </div>
-                    <div class="product-details">
-                        <!-- EDIT PRODUCT 3 DETAILS HERE -->
-                        <p class="product-category-label">Shoes</p>
-                        <h4 class="product-name">Two-Tone Slingback</h4>
-                        <p>The legendary slingback elevated with vegetable-tanned leather and FSC-certified wood heels. Elegant comfort built to last.</p>
-                        
-                        <div class="product-info">
-                            <div class="product-info-row">
-                                <span class="info-label">Style Number</span>
-                                <span class="info-value">G31318 Y55587</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Classification</span>
-                                <span class="info-value">Footwear / Heel</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Material</span>
-                                <span class="info-value">Goatskin, Grosgrain</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Color Story</span>
-                                <span class="info-value">Beige / Black Cap Toe</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Price Point</span>
-                                <span class="info-value">$X,XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Target Customer</span>
-                                <span class="info-value">Classic Elegance Seeker</span>
+            <!-- Shoes Products -->
+            <div class="product-category" id="cat-shoes">
+                <div class="product-grid">
+                    <!-- SHOES PRODUCT 1 - EDIT HERE -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/shoe-1.jpg</span>
                             </div>
                         </div>
-                        
-                        <div class="product-sustainability">
-                            <h5>Circular Economy Notes</h5>
-                            <p>Resoling service available. Leather conditioning program included. Expected lifespan: 15+ years with care.</p>
+                        <div class="product-details">
+                            <h4 class="product-name">Two-Tone Slingback</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-SHO-S27-001</p>
+                                <p><strong>Classification:</strong> Footwear / Heels</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Material:</strong> Lambskin &amp; Grosgrain — Italian Craft</p>
+                                <p><strong>Color Story:</strong> Beige &amp; Noir Classic</p>
+                                <p><strong>Price Point:</strong> $1,150 - $1,350</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> Style-conscious professional</p>
+                                <p><strong>Trend Inspiration:</strong> Iconic silhouette, ballet influence</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> Vegetable-tanned leather</p>
+                                <p><strong>Circular Strategy:</strong> Resoling program available</p>
+                                <p><strong>Supply Chain:</strong> Tier 4 Italy → Tier 1 Italy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Product Card 4 -->
-                <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Product Image 4
-                            <span>images/products/product-4.jpg</span>
-                        </div>
-                    </div>
-                    <div class="product-details">
-                        <!-- EDIT PRODUCT 4 DETAILS HERE -->
-                        <p class="product-category-label">Accessories</p>
-                        <h4 class="product-name">Pearl Necklace</h4>
-                        <p>Sustainably cultivated pearls set in recycled precious metals. A signature piece connecting past and future generations.</p>
-                        
-                        <div class="product-info">
-                            <div class="product-info-row">
-                                <span class="info-label">Style Number</span>
-                                <span class="info-value">ABB088 B14305</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Classification</span>
-                                <span class="info-value">Jewelry / Necklace</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Material</span>
-                                <span class="info-value">Cultured Pearls, Gold Metal</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Color Story</span>
-                                <span class="info-value">Pearl White / Gold</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Price Point</span>
-                                <span class="info-value">$X,XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Target Customer</span>
-                                <span class="info-value">Timeless Style Curator</span>
+            <!-- Accessories Products -->
+            <div class="product-category" id="cat-accessories">
+                <div class="product-grid">
+                    <!-- ACCESSORIES PRODUCT 1 - EDIT HERE -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/acc-1.jpg</span>
                             </div>
                         </div>
-                        
-                        <div class="product-sustainability">
-                            <h5>Circular Economy Notes</h5>
-                            <p>Pearl restringing service. Metal refinishing available. Heirloom documentation program for provenance tracking.</p>
+                        <div class="product-details">
+                            <h4 class="product-name">Pearl CC Earrings</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-ACC-S27-001</p>
+                                <p><strong>Classification:</strong> Jewelry / Earrings</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Material:</strong> Gold-Plated Metal &amp; Glass Pearls</p>
+                                <p><strong>Color Story:</strong> Vintage Gold &amp; Cream Pearl</p>
+                                <p><strong>Price Point:</strong> $850 - $1,200</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> Entry luxury, gifting market</p>
+                                <p><strong>Trend Inspiration:</strong> Logo renaissance, pearl revival</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> Recycled brass base</p>
+                                <p><strong>Circular Strategy:</strong> Replating service offered</p>
+                                <p><strong>Supply Chain:</strong> Tier 3 France → Tier 1 France</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Product Card 5 -->
-                <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Product Image 5
-                            <span>images/products/product-5.jpg</span>
-                        </div>
-                    </div>
-                    <div class="product-details">
-                        <!-- EDIT PRODUCT 5 DETAILS HERE -->
-                        <p class="product-category-label">Beauty</p>
-                        <h4 class="product-name">N°5 Parfum</h4>
-                        <p>The world's most iconic fragrance, now in refillable crystal flacons. Timeless essence with sustainable consciousness.</p>
-                        
-                        <div class="product-info">
-                            <div class="product-info-row">
-                                <span class="info-label">Style Number</span>
-                                <span class="info-value">N5-50ML-REF</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Classification</span>
-                                <span class="info-value">Fragrance / Parfum</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Notes</span>
-                                <span class="info-value">Aldehydes, Jasmine, Sandalwood</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Size</span>
-                                <span class="info-value">50ml Refillable</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Price Point</span>
-                                <span class="info-value">$XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Target Customer</span>
-                                <span class="info-value">Signature Scent Devotee</span>
+            <!-- Beauty Products -->
+            <div class="product-category" id="cat-beauty">
+                <div class="product-grid">
+                    <!-- BEAUTY PRODUCT 1 - EDIT HERE -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/products/beauty-1.jpg</span>
                             </div>
                         </div>
-                        
-                        <div class="product-sustainability">
-                            <h5>Circular Economy Notes</h5>
-                            <p>Refill program reduces packaging waste by 70%. Crystal flacon designed as collectible keepsake.</p>
+                        <div class="product-details">
+                            <h4 class="product-name">Rouge Coco Bloom</h4>
+                            <div class="product-meta">
+                                <p><strong>Style Number:</strong> CC-BTY-S27-001</p>
+                                <p><strong>Classification:</strong> Makeup / Lips</p>
+                            </div>
+                            <div class="product-specs">
+                                <p><strong>Formula:</strong> Plumping Lip Colour</p>
+                                <p><strong>Color Story:</strong> Seasonal Nude to Bold Palette</p>
+                                <p><strong>Price Point:</strong> $45 - $52</p>
+                            </div>
+                            <div class="product-strategy">
+                                <p><strong>Target Customer:</strong> Broad luxury beauty consumer</p>
+                                <p><strong>Trend Inspiration:</strong> Clean beauty meets luxury</p>
+                            </div>
+                            <div class="product-sustainability">
+                                <p><strong>Sustainability:</strong> Refillable packaging design</p>
+                                <p><strong>Circular Strategy:</strong> Refill program, recyclable case</p>
+                                <p><strong>Supply Chain:</strong> Tier 3 France → Tier 1 France</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Product Card 6 -->
-                <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Product Image 6
-                            <span>images/products/product-6.jpg</span>
-                        </div>
-                    </div>
-                    <div class="product-details">
-                        <!-- EDIT PRODUCT 6 DETAILS HERE -->
-                        <p class="product-category-label">Ready-to-Wear</p>
-                        <h4 class="product-name">Little Black Dress</h4>
-                        <p>Coco's revolutionary vision reborn: simplicity, elegance, and sustainability interwoven in one timeless silhouette.</p>
-                        
-                        <div class="product-info">
-                            <div class="product-info-row">
-                                <span class="info-label">Style Number</span>
-                                <span class="info-value">P78XXX V68XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Classification</span>
-                                <span class="info-value">Dress / Cocktail</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Fabric</span>
-                                <span class="info-value">Organic Silk Crepe</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Color Story</span>
-                                <span class="info-value">Classic Noir</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Price Point</span>
-                                <span class="info-value">$X,XXX</span>
-                            </div>
-                            <div class="product-info-row">
-                                <span class="info-label">Target Customer</span>
-                                <span class="info-value">Modern Classicist</span>
-                            </div>
-                        </div>
-                        
-                        <div class="product-sustainability">
-                            <h5>Circular Economy Notes</h5>
-                            <p>Alteration services included. Designed for versatility across decades of style evolution. Timeless investment piece.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         SUPPLY CHAIN TRACEABILITY SECTION
+         7. SUPPLY CHAIN TRACEABILITY
          ==================================================== -->
-    <section id="supply-chain">
-        <div class="section-container">
+    <section class="section section-dark" id="supply-chain">
+        <div class="container">
             <div class="section-header">
-                <span class="label" style="color: var(--color-gold);">Transparency</span>
-                <h2>Supply Chain Traceability</h2>
-                <div class="divider"></div>
-                <p style="max-width: 700px; margin: 2rem auto 0; text-align: center; color: var(--color-gray);">
-                    From raw material to cherished possession—complete transparency in every stage of creation.
-                </p>
+                <p class="section-eyebrow">Transparency</p>
+                <h2 class="section-title">Supply Chain Traceability</h2>
+                <p class="section-subtitle">From Raw Materials to Customer Experience</p>
             </div>
 
-            <!--
-            ====================================================
-            IMAGE FOLDER STRUCTURE:
-            images/
-              └── supply-chain/
-                    ├── tier-4.jpg (Raw Materials)
-                    ├── tier-3.jpg (Fabric Mills)
-                    ├── tier-2.jpg (Components)
-                    ├── tier-1.jpg (Manufacturing)
-                    └── tier-0.jpg (Retail Experience)
-            ====================================================
+            <!-- 
+                IMAGE FOLDER STRUCTURE:
+                images/
+                └── supply-chain/
+                    ├── tier-4.jpg (raw materials)
+                    ├── tier-3.jpg (textile mills)
+                    ├── tier-2.jpg (components)
+                    ├── tier-1.jpg (manufacturing)
+                    └── tier-0.jpg (retail)
             -->
 
             <div class="supply-chain-flow">
-
-                <!-- TIER 4: Raw Materials -->
-                <!-- EDIT TIER 4 DETAILS HERE -->
+                
+                <!-- TIER 4 - RAW MATERIALS - EDIT HERE -->
                 <div class="tier-card">
-                    <div class="tier-visual">
-                        <div class="image-placeholder" style="background: rgba(255,255,255,0.05);">
-                            Raw Materials Image
-                            <span>images/supply-chain/tier-4.jpg</span>
-                        </div>
+                    <div class="tier-header">
+                        <span class="tier-number">T4</span>
+                        <h3>Raw Materials</h3>
                     </div>
                     <div class="tier-content">
-                        <div class="tier-number">T4</div>
-                        <h3 class="tier-title">Raw Materials</h3>
-                        <p style="color: var(--color-gray); margin-bottom: 1.5rem;">
-                            The foundation of luxury begins with the finest raw materials, 
-                            sourced with integrity and respect for nature's craftsmanship.
-                        </p>
-                        
+                        <div class="tier-image">
+                            <div class="image-placeholder">
+                                <p>Tier 4 Image</p>
+                                <span>images/supply-chain/tier-4.jpg</span>
+                            </div>
+                            <!-- Replace with: <img src="images/supply-chain/tier-4.jpg" alt="Raw materials"> -->
+                        </div>
                         <div class="tier-details">
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Supplier</span>
-                                <span class="detail-value">[Edit: Supplier Name]</span>
+                            <!-- EDIT TIER 4 DETAILS HERE -->
+                            <div class="detail-row">
+                                <strong>Supplier:</strong>
+                                <span>[Supplier Name]</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Country of Origin</span>
-                                <span class="detail-value">[Edit: Country]</span>
+                            <div class="detail-row">
+                                <strong>Location:</strong>
+                                <span>Scotland, United Kingdom</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Location</span>
-                                <span class="detail-value">[Edit: Region/Farm]</span>
+                            <div class="detail-row">
+                                <strong>Materials:</strong>
+                                <span>Scottish Wool, Organic Cotton, Raw Silk</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Material</span>
-                                <span class="detail-value">[Edit: Wool, Silk, Cotton, etc.]</span>
+                            <div class="detail-row">
+                                <strong>Sustainability:</strong>
+                                <span>ZQ Merino certified, regenerative farming practices</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Sustainability</span>
-                                <span class="detail-value">[Edit: Certifications, Practices]</span>
+                            <div class="detail-row">
+                                <strong>Craftsmanship:</strong>
+                                <span>Heritage sheep farming, 200+ year tradition</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Circular Connection</span>
-                                <span class="detail-value">[Edit: Recycled content, regenerative farming]</span>
+                            <div class="detail-row">
+                                <strong>Circular Connection:</strong>
+                                <span>Fully biodegradable natural fibers</span>
+                            </div>
+                            <div class="detail-row reference">
+                                <strong>APA Reference:</strong>
+                                <span>[Author. (Year). Title. Source.]</span>
                             </div>
                         </div>
-                        
-                        <div class="tier-reference">
-                            <strong>APA Reference</strong>
-                            [Edit: Insert APA citation for supplier/material research]
-                        </div>
+                    </div>
+                    <div class="tier-connector">
+                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
+                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
+                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
+                        </svg>
                     </div>
                 </div>
 
-                <!-- TIER 3: Fabric & Textile Mills -->
-                <!-- EDIT TIER 3 DETAILS HERE -->
+                <!-- TIER 3 - TEXTILE MILLS - EDIT HERE -->
                 <div class="tier-card">
-                    <div class="tier-visual">
-                        <div class="image-placeholder" style="background: rgba(255,255,255,0.05);">
-                            Textile Mills Image
-                            <span>images/supply-chain/tier-3.jpg</span>
-                        </div>
+                    <div class="tier-header">
+                        <span class="tier-number">T3</span>
+                        <h3>Fabric &amp; Textile Mills</h3>
                     </div>
                     <div class="tier-content">
-                        <div class="tier-number">T3</div>
-                        <h3 class="tier-title">Fabric & Textile Mills</h3>
-                        <p style="color: var(--color-gray); margin-bottom: 1.5rem;">
-                            Master weavers transform raw fibers into signature CHANEL textiles—
-                            tweed, silk, and specialty fabrics crafted with generational expertise.
-                        </p>
-                        
+                        <div class="tier-image">
+                            <div class="image-placeholder">
+                                <p>Tier 3 Image</p>
+                                <span>images/supply-chain/tier-3.jpg</span>
+                            </div>
+                        </div>
                         <div class="tier-details">
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Mill Name</span>
-                                <span class="detail-value">[Edit: Mill/Manufacturer]</span>
+                            <!-- EDIT TIER 3 DETAILS HERE -->
+                            <div class="detail-row">
+                                <strong>Supplier:</strong>
+                                <span>Lesage (CHANEL Metiers d'Art)</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Country</span>
-                                <span class="detail-value">[Edit: France, Italy, Scotland]</span>
+                            <div class="detail-row">
+                                <strong>Location:</strong>
+                                <span>Paris, France</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Location</span>
-                                <span class="detail-value">[Edit: City/Region]</span>
+                            <div class="detail-row">
+                                <strong>Materials:</strong>
+                                <span>Signature Tweed, Embroidered Fabrics</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Specialty</span>
-                                <span class="detail-value">[Edit: Tweed, Silk Weaving, etc.]</span>
+                            <div class="detail-row">
+                                <strong>Sustainability:</strong>
+                                <span>OEKO-TEX certified, zero-waste cutting</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Craftsmanship</span>
-                                <span class="detail-value">[Edit: Traditional techniques, heritage]</span>
+                            <div class="detail-row">
+                                <strong>Craftsmanship:</strong>
+                                <span>Artisan embroidery house since 1924</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Circular Connection</span>
-                                <span class="detail-value">[Edit: Zero-waste weaving, water recycling]</span>
+                            <div class="detail-row">
+                                <strong>Circular Connection:</strong>
+                                <span>Fabric scraps repurposed for accessories</span>
+                            </div>
+                            <div class="detail-row reference">
+                                <strong>APA Reference:</strong>
+                                <span>[Author. (Year). Title. Source.]</span>
                             </div>
                         </div>
-                        
-                        <div class="tier-reference">
-                            <strong>APA Reference</strong>
-                            [Edit: Insert APA citation for mill research]
-                        </div>
+                    </div>
+                    <div class="tier-connector">
+                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
+                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
+                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
+                        </svg>
                     </div>
                 </div>
 
-                <!-- TIER 2: Components & Hardware -->
-                <!-- EDIT TIER 2 DETAILS HERE -->
+                <!-- TIER 2 - COMPONENTS - EDIT HERE -->
                 <div class="tier-card">
-                    <div class="tier-visual">
-                        <div class="image-placeholder" style="background: rgba(255,255,255,0.05);">
-                            Components Image
-                            <span>images/supply-chain/tier-2.jpg</span>
-                        </div>
+                    <div class="tier-header">
+                        <span class="tier-number">T2</span>
+                        <h3>Components &amp; Hardware</h3>
                     </div>
                     <div class="tier-content">
-                        <div class="tier-number">T2</div>
-                        <h3 class="tier-title">Components & Hardware</h3>
-                        <p style="color: var(--color-gray); margin-bottom: 1.5rem;">
-                            The details that define luxury—buttons, chains, clasps, and 
-                            embellishments crafted by specialist ateliers with meticulous precision.
-                        </p>
-                        
+                        <div class="tier-image">
+                            <div class="image-placeholder">
+                                <p>Tier 2 Image</p>
+                                <span>images/supply-chain/tier-2.jpg</span>
+                            </div>
+                        </div>
                         <div class="tier-details">
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Supplier</span>
-                                <span class="detail-value">[Edit: Component Maker]</span>
+                            <!-- EDIT TIER 2 DETAILS HERE -->
+                            <div class="detail-row">
+                                <strong>Supplier:</strong>
+                                <span>Desrues (CHANEL Metiers d'Art)</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Country</span>
-                                <span class="detail-value">[Edit: France, Italy]</span>
+                            <div class="detail-row">
+                                <strong>Location:</strong>
+                                <span>Paris, France</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Location</span>
-                                <span class="detail-value">[Edit: Workshop Location]</span>
+                            <div class="detail-row">
+                                <strong>Components:</strong>
+                                <span>Buttons, Chains, CC Hardware, Zippers</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Components</span>
-                                <span class="detail-value">[Edit: Buttons, Chains, Zippers]</span>
+                            <div class="detail-row">
+                                <strong>Sustainability:</strong>
+                                <span>Recycled brass, responsible gold sourcing (RJC)</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Craftsmanship</span>
-                                <span class="detail-value">[Edit: Hand-finishing, plating]</span>
+                            <div class="detail-row">
+                                <strong>Craftsmanship:</strong>
+                                <span>Button makers since 1929, hand-finishing</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Circular Connection</span>
-                                <span class="detail-value">[Edit: Recycled metals, replacement parts]</span>
+                            <div class="detail-row">
+                                <strong>Circular Connection:</strong>
+                                <span>Hardware designed for lifetime durability</span>
+                            </div>
+                            <div class="detail-row reference">
+                                <strong>APA Reference:</strong>
+                                <span>[Author. (Year). Title. Source.]</span>
                             </div>
                         </div>
-                        
-                        <div class="tier-reference">
-                            <strong>APA Reference</strong>
-                            [Edit: Insert APA citation for component research]
-                        </div>
+                    </div>
+                    <div class="tier-connector">
+                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
+                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
+                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
+                        </svg>
                     </div>
                 </div>
 
-                <!-- TIER 1: Manufacturing & Assembly -->
-                <!-- EDIT TIER 1 DETAILS HERE -->
+                <!-- TIER 1 - MANUFACTURING - EDIT HERE -->
                 <div class="tier-card">
-                    <div class="tier-visual">
-                        <div class="image-placeholder" style="background: rgba(255,255,255,0.05);">
-                            Manufacturing Image
-                            <span>images/supply-chain/tier-1.jpg</span>
-                        </div>
+                    <div class="tier-header">
+                        <span class="tier-number">T1</span>
+                        <h3>Manufacturing &amp; Assembly</h3>
                     </div>
                     <div class="tier-content">
-                        <div class="tier-number">T1</div>
-                        <h3 class="tier-title">Manufacturing & Assembly</h3>
-                        <p style="color: var(--color-gray); margin-bottom: 1.5rem;">
-                            In CHANEL's own ateliers, master craftspeople bring designs to life—
-                            each stitch a testament to generations of savoir-faire.
-                        </p>
-                        
+                        <div class="tier-image">
+                            <div class="image-placeholder">
+                                <p>Tier 1 Image</p>
+                                <span>images/supply-chain/tier-1.jpg</span>
+                            </div>
+                        </div>
                         <div class="tier-details">
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Atelier</span>
-                                <span class="detail-value">[Edit: CHANEL Atelier Name]</span>
+                            <!-- EDIT TIER 1 DETAILS HERE -->
+                            <div class="detail-row">
+                                <strong>Manufacturer:</strong>
+                                <span>CHANEL Ateliers</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Country</span>
-                                <span class="detail-value">[Edit: France]</span>
+                            <div class="detail-row">
+                                <strong>Location:</strong>
+                                <span>Paris &amp; Aubervilliers, France</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Location</span>
-                                <span class="detail-value">[Edit: Paris, Pantin, etc.]</span>
+                            <div class="detail-row">
+                                <strong>Production:</strong>
+                                <span>Hand-tailored garments, hand-stitched bags</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Process</span>
-                                <span class="detail-value">[Edit: Hand-sewn, quality control]</span>
+                            <div class="detail-row">
+                                <strong>Sustainability:</strong>
+                                <span>Solar-powered facilities, carbon neutral by 2025</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Craftsmanship</span>
-                                <span class="detail-value">[Edit: Artisan training, techniques]</span>
+                            <div class="detail-row">
+                                <strong>Craftsmanship:</strong>
+                                <span>Master artisans, 15-20 hours per jacket</span>
                             </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Circular Connection</span>
-                                <span class="detail-value">[Edit: Repair services, lifetime care]</span>
+                            <div class="detail-row">
+                                <strong>Circular Connection:</strong>
+                                <span>Built for repair, modular construction</span>
+                            </div>
+                            <div class="detail-row reference">
+                                <strong>APA Reference:</strong>
+                                <span>[Author. (Year). Title. Source.]</span>
                             </div>
                         </div>
-                        
-                        <div class="tier-reference">
-                            <strong>APA Reference</strong>
-                            [Edit: Insert APA citation for manufacturing research]
-                        </div>
+                    </div>
+                    <div class="tier-connector">
+                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
+                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
+                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
+                        </svg>
                     </div>
                 </div>
 
-                <!-- TIER 0: Retail & Customer Experience -->
-                <!-- EDIT TIER 0 CUSTOMER EXPERIENCE HERE -->
-                <div class="tier-card">
-                    <div class="tier-visual">
-                        <div class="image-placeholder" style="background: rgba(255,255,255,0.05);">
-                            Boutique Experience Image
-                            <span>images/supply-chain/tier-0.jpg</span>
-                        </div>
+                <!-- TIER 0 - RETAIL - EDIT HERE -->
+                <div class="tier-card tier-final">
+                    <div class="tier-header">
+                        <span class="tier-number">T0</span>
+                        <h3>Retail &amp; Customer Experience</h3>
                     </div>
                     <div class="tier-content">
-                        <div class="tier-number">T0</div>
-                        <h3 class="tier-title">Retail & Customer Experience</h3>
-                        <p style="color: var(--color-gray); margin-bottom: 1.5rem;">
-                            The culmination of the journey—where craftsmanship meets customer 
-                            in an experience as refined as the products themselves.
-                        </p>
-                        
-                        <div class="tier-details">
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Channel</span>
-                                <span class="detail-value">[Edit: Flagship Boutique]</span>
-                            </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Location</span>
-                                <span class="detail-value">[Edit: 31 Rue Cambon, Paris]</span>
-                            </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">[Edit: Personal shopping, VIP services]</span>
-                            </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Packaging</span>
-                                <span class="detail-value">[Edit: Sustainable materials, reusable]</span>
-                            </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">After-Sale</span>
-                                <span class="detail-value">[Edit: Care guides, repair services]</span>
-                            </div>
-                            <div class="tier-detail-row">
-                                <span class="detail-label">Circular Connection</span>
-                                <span class="detail-value">[Edit: Buy-back program, authentication]</span>
+                        <div class="tier-image">
+                            <div class="image-placeholder">
+                                <p>Tier 0 Image</p>
+                                <span>images/supply-chain/tier-0.jpg</span>
                             </div>
                         </div>
-                        
-                        <div class="tier-reference">
-                            <strong>APA Reference</strong>
-                            [Edit: Insert APA citation for retail research]
+                        <div class="tier-details">
+                            <!-- EDIT TIER 0 CUSTOMER EXPERIENCE HERE -->
+                            <div class="detail-row">
+                                <strong>Channel:</strong>
+                                <span>CHANEL Boutiques Worldwide</span>
+                            </div>
+                            <div class="detail-row">
+                                <strong>Locations:</strong>
+                                <span>310+ boutiques, 40+ countries</span>
+                            </div>
+                            <div class="detail-row">
+                                <strong>Experience:</strong>
+                                <span>Personal styling, heritage storytelling, care education</span>
+                            </div>
+                            <div class="detail-row">
+                                <strong>Sustainability:</strong>
+                                <span>Sustainable packaging, digital receipts</span>
+                            </div>
+                            <div class="detail-row">
+                                <strong>Service:</strong>
+                                <span>Lifetime care program, authentication services</span>
+                            </div>
+                            <div class="detail-row">
+                                <strong>Circular Connection:</strong>
+                                <span>Repair services, resale authentication, archive program</span>
+                            </div>
+                            <div class="detail-row reference">
+                                <strong>APA Reference:</strong>
+                                <span>[Author. (Year). Title. Source.]</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         CIRCULAR ECONOMY SECTION
+         8. CIRCULAR ECONOMY STRATEGY
          ==================================================== -->
-    <section id="circular">
-        <div class="section-container">
+    <section class="section" id="circular">
+        <div class="container">
             <div class="section-header">
-                <span class="label">Sustainability</span>
-                <h2>Circular Economy Strategy</h2>
-                <div class="divider"></div>
+                <p class="section-eyebrow">Sustainability</p>
+                <h2 class="section-title">Circular Economy Strategy</h2>
             </div>
 
-            <div class="circular-intro">
-                <p>
-                    CHANEL's approach to sustainability is not a departure from luxury—it is the ultimate 
-                    expression of it. True luxury has always been about permanence, quality, and emotional 
-                    value. The circular economy simply gives a name to what CHANEL has practiced since 1910.
-                </p>
-            </div>
-
-            <!-- EDIT CIRCULAR PILLARS HERE -->
-            <div class="circular-pillars">
-                <div class="circular-pillar">
-                    <div class="circular-icon">◇</div>
-                    <h4>Repair Services</h4>
-                    <p>Lifetime care programs ensure every CHANEL piece can be restored to its original glory—buttons replaced, leather conditioned, metals refinished.</p>
-                </div>
-                <div class="circular-pillar">
-                    <div class="circular-icon">◇</div>
-                    <h4>Product Longevity</h4>
-                    <p>Designed not for seasons but for decades. Reinforced construction, timeless silhouettes, and quality materials that improve with age.</p>
-                </div>
-                <div class="circular-pillar">
-                    <div class="circular-icon">◇</div>
-                    <h4>Timeless Design</h4>
-                    <p>Classic aesthetics that transcend trends. The pieces purchased today will remain stylish for generations to come.</p>
-                </div>
-                <div class="circular-pillar">
-                    <div class="circular-icon">◇</div>
-                    <h4>Resale Culture</h4>
-                    <p>A thriving vintage market demonstrates value retention. CHANEL pieces often appreciate, making them true investments.</p>
-                </div>
-                <div class="circular-pillar">
-                    <div class="circular-icon">◇</div>
-                    <h4>Archive Value</h4>
-                    <p>Historical pieces become treasured collectibles. Museums and collectors actively preserve CHANEL's heritage.</p>
-                </div>
-                <div class="circular-pillar">
-                    <div class="circular-icon">◇</div>
-                    <h4>Emotional Durability</h4>
-                    <p>Beyond physical longevity—pieces carry memories, stories, and sentimental value that strengthens over time.</p>
-                </div>
-            </div>
-
-            <!-- Quote Block -->
-            <div class="quote-block">
+            <!-- EDIT CIRCULAR QUOTE HERE -->
+            <div class="circular-quote">
                 <blockquote>
-                    "Fashion changes, but style endures. In an age of disposability, 
-                    we choose to create pieces worthy of being passed down through generations."
+                    "True luxury is not disposable. It is designed to endure, 
+                    to be repaired, to be passed down, to be treasured."
                 </blockquote>
-                <cite>— The Philosophy of Circular Luxury</cite>
             </div>
 
-            <!-- EDIT STATISTICS HERE - Replace with real data -->
+            <!-- Circular Pillars -->
+            <div class="circular-grid">
+                <!-- EDIT CIRCULAR PILLARS HERE -->
+                
+                <div class="circular-pillar">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h4>Timeless Design</h4>
+                    <p>Creating pieces that transcend trends and seasons. Investment in enduring 
+                    style over disposable fashion. Design philosophy centered on longevity.</p>
+                </div>
+
+                <div class="circular-pillar">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h4>Repair &amp; Care</h4>
+                    <p>Lifetime service commitment from CHANEL ateliers. Expert artisans restore 
+                    and maintain pieces. Preserving beauty and value for generations.</p>
+                </div>
+
+                <div class="circular-pillar">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h4>Emotional Durability</h4>
+                    <p>Building lasting emotional connections between owner and piece. Products 
+                    that gain meaning with time. Fashion as personal heritage.</p>
+                </div>
+
+                <div class="circular-pillar">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
+                            <path d="M21 3v5h-5"/>
+                        </svg>
+                    </div>
+                    <h4>Resale &amp; Archive</h4>
+                    <p>Authenticated secondary market supporting product longevity. Vintage 
+                    CHANEL appreciates in value. Circular economy in action.</p>
+                </div>
+
+                <div class="circular-pillar">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h4>Craftsmanship Excellence</h4>
+                    <p>Master artisans ensuring highest quality construction. Techniques passed 
+                    through generations. Built to last a lifetime.</p>
+                </div>
+
+                <div class="circular-pillar">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4>Legacy Culture</h4>
+                    <p>Encouraging heirloom mindset among clients. Pieces designed to be passed 
+                    down. Family fashion heritage preserved.</p>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
             <div class="circular-stats">
-                <div class="circular-stat">
-                    <span class="stat-number">XX%</span>
-                    <span class="stat-text">Vintage Value Retention</span>
+                <!-- EDIT STATISTICS HERE -->
+                <div class="stat-card">
+                    <p class="stat-number">15-20</p>
+                    <p class="stat-label">Hours of craftsmanship per jacket</p>
                 </div>
-                <div class="circular-stat">
-                    <span class="stat-number">XX+</span>
-                    <span class="stat-text">Years Average Product Lifespan</span>
+                <div class="stat-card">
+                    <p class="stat-number">100+</p>
+                    <p class="stat-label">Year lifespan with proper care</p>
                 </div>
-                <div class="circular-stat">
-                    <span class="stat-number">XX%</span>
-                    <span class="stat-text">Repair Service Utilization</span>
-                </div>
-                <div class="circular-stat">
-                    <span class="stat-number">XX%</span>
-                    <span class="stat-text">Sustainable Materials</span>
+                <div class="stat-card">
+                    <p class="stat-number">70%</p>
+                    <p class="stat-label">Resale value retention</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         ABOUT / TEAM SECTION
+         9. ABOUT US / TEAM
          ==================================================== -->
-    <section id="about">
-        <div class="section-container">
+    <section class="section section-alt" id="about">
+        <div class="container">
             <div class="section-header">
-                <span class="label">The Team</span>
-                <h2>About Us</h2>
-                <div class="divider"></div>
+                <p class="section-eyebrow">Team</p>
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">FIT SUNY Korea | Fashion Business Management</p>
             </div>
 
-            <div class="team-intro">
-                <p>
-                    We are Fashion Business Management students at FIT SUNY Korea, 
-                    united by our passion for luxury fashion and commitment to sustainable futures.
-                </p>
-            </div>
-
-            <!--
-            ====================================================
-            IMAGE FOLDER STRUCTURE:
-            images/
-              └── team/
+            <!-- 
+                IMAGE FOLDER STRUCTURE:
+                images/
+                └── team/
                     ├── member-1.jpg
                     ├── member-2.jpg
                     ├── member-3.jpg
                     ├── member-4.jpg
                     └── member-5.jpg
-            ====================================================
             -->
 
-            <!-- EDIT TEAM MEMBER INFO HERE -->
             <div class="team-grid">
-
-                <!-- Team Member 1 -->
-                <!-- EDIT TEAM MEMBER 1 HERE -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <!-- INSERT TEAM MEMBER 1 IMAGE HERE -->
+                
+                <!-- TEAM MEMBER 1 - EDIT HERE -->
+                <div class="team-card">
+                    <div class="team-image">
                         <div class="image-placeholder">
-                            Photo
-                            <span>member-1.jpg</span>
+                            <p>Photo</p>
+                            <span>images/team/member-1.jpg</span>
                         </div>
+                        <!-- Replace placeholder with: <img src="images/team/member-1.jpg" alt="Team member name"> -->
                     </div>
-                    <h4 class="member-name">[First Name]</h4>
-                    <p class="member-keyword">Strategist</p>
-                    <p class="member-role">Project Lead / Brand Strategy</p>
-                    <p class="member-bio">[Edit: Brief bio about this team member's role and contribution to the project.]</p>
-                    <a href="#" class="member-linkedin">LinkedIn Profile</a>
+                    <div class="team-info">
+                        <!-- EDIT TEAM MEMBER INFO HERE -->
+                        <h4 class="team-name">[First Name]</h4>
+                        <p class="team-keyword">Strategy</p>
+                        <p class="team-role">Project Lead / Research</p>
+                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <a href="#" class="team-linkedin">LinkedIn</a>
+                    </div>
                 </div>
 
-                <!-- Team Member 2 -->
-                <!-- EDIT TEAM MEMBER 2 HERE -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <!-- INSERT TEAM MEMBER 2 IMAGE HERE -->
+                <!-- TEAM MEMBER 2 - EDIT HERE -->
+                <div class="team-card">
+                    <div class="team-image">
                         <div class="image-placeholder">
-                            Photo
-                            <span>member-2.jpg</span>
+                            <p>Photo</p>
+                            <span>images/team/member-2.jpg</span>
                         </div>
                     </div>
-                    <h4 class="member-name">[First Name]</h4>
-                    <p class="member-keyword">Creative</p>
-                    <p class="member-role">Visual Direction / Product Design</p>
-                    <p class="member-bio">[Edit: Brief bio about this team member's role and contribution to the project.]</p>
-                    <a href="#" class="member-linkedin">LinkedIn Profile</a>
+                    <div class="team-info">
+                        <h4 class="team-name">[First Name]</h4>
+                        <p class="team-keyword">Creative</p>
+                        <p class="team-role">Visual Design / Moodboard</p>
+                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <a href="#" class="team-linkedin">LinkedIn</a>
+                    </div>
                 </div>
 
-                <!-- Team Member 3 -->
-                <!-- EDIT TEAM MEMBER 3 HERE -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <!-- INSERT TEAM MEMBER 3 IMAGE HERE -->
+                <!-- TEAM MEMBER 3 - EDIT HERE -->
+                <div class="team-card">
+                    <div class="team-image">
                         <div class="image-placeholder">
-                            Photo
-                            <span>member-3.jpg</span>
+                            <p>Photo</p>
+                            <span>images/team/member-3.jpg</span>
                         </div>
                     </div>
-                    <h4 class="member-name">[First Name]</h4>
-                    <p class="member-keyword">Analyst</p>
-                    <p class="member-role">Supply Chain Research</p>
-                    <p class="member-bio">[Edit: Brief bio about this team member's role and contribution to the project.]</p>
-                    <a href="#" class="member-linkedin">LinkedIn Profile</a>
+                    <div class="team-info">
+                        <h4 class="team-name">[First Name]</h4>
+                        <p class="team-keyword">Sustainability</p>
+                        <p class="team-role">Supply Chain Research</p>
+                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <a href="#" class="team-linkedin">LinkedIn</a>
+                    </div>
                 </div>
 
-                <!-- Team Member 4 -->
-                <!-- EDIT TEAM MEMBER 4 HERE -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <!-- INSERT TEAM MEMBER 4 IMAGE HERE -->
+                <!-- TEAM MEMBER 4 - EDIT HERE -->
+                <div class="team-card">
+                    <div class="team-image">
                         <div class="image-placeholder">
-                            Photo
-                            <span>member-4.jpg</span>
+                            <p>Photo</p>
+                            <span>images/team/member-4.jpg</span>
                         </div>
                     </div>
-                    <h4 class="member-name">[First Name]</h4>
-                    <p class="member-keyword">Sustainability</p>
-                    <p class="member-role">Circular Economy Strategy</p>
-                    <p class="member-bio">[Edit: Brief bio about this team member's role and contribution to the project.]</p>
-                    <a href="#" class="member-linkedin">LinkedIn Profile</a>
+                    <div class="team-info">
+                        <h4 class="team-name">[First Name]</h4>
+                        <p class="team-keyword">Product</p>
+                        <p class="team-role">Product Development</p>
+                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <a href="#" class="team-linkedin">LinkedIn</a>
+                    </div>
                 </div>
 
-                <!-- Team Member 5 -->
-                <!-- EDIT TEAM MEMBER 5 HERE -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <!-- INSERT TEAM MEMBER 5 IMAGE HERE -->
+                <!-- TEAM MEMBER 5 - DUPLICATE OR REMOVE AS NEEDED -->
+                <div class="team-card">
+                    <div class="team-image">
                         <div class="image-placeholder">
-                            Photo
-                            <span>member-5.jpg</span>
+                            <p>Photo</p>
+                            <span>images/team/member-5.jpg</span>
                         </div>
                     </div>
-                    <h4 class="member-name">[First Name]</h4>
-                    <p class="member-keyword">Presenter</p>
-                    <p class="member-role">Content & Presentation</p>
-                    <p class="member-bio">[Edit: Brief bio about this team member's role and contribution to the project.]</p>
-                    <a href="#" class="member-linkedin">LinkedIn Profile</a>
+                    <div class="team-info">
+                        <h4 class="team-name">[First Name]</h4>
+                        <p class="team-keyword">Marketing</p>
+                        <p class="team-role">Brand Strategy</p>
+                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <a href="#" class="team-linkedin">LinkedIn</a>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         FOOTER
+         10. FOOTER
          ==================================================== -->
-    <footer>
-        <div class="footer-logo">CHANEL</div>
-        <p class="footer-tagline">Timeless Circular Luxury</p>
-        <p class="footer-info">Spring 2027 Collection</p>
-        <p class="footer-info">FIT SUNY Korea · Fashion Business Management</p>
-        <div class="footer-credits">
-            <p>Final Project · Academic Use Only · Not Affiliated with CHANEL S.A.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p class="footer-logo">CHANEL</p>
+                    <p class="footer-tagline">Spring 2027 | Timeless Circular Luxury</p>
+                </div>
+                <div class="footer-info">
+                    <p>FIT SUNY Korea</p>
+                    <p>Fashion Business Management</p>
+                    <p>Final Project 2027</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>This is an academic project for educational purposes only.</p>
+                <p>CHANEL is a registered trademark of CHANEL S.A.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- ====================================================
-         JAVASCRIPT
-         ==================================================== -->
-    <script>
-        // ====================================================
-        // Navigation Scroll Effect
-        // ====================================================
-        const navbar = document.getElementById('navbar');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // ====================================================
-        // Mobile Navigation Toggle
-        // ====================================================
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile nav when link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // ====================================================
-        // Smooth Scroll for Anchor Links
-        // ====================================================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // ====================================================
-        // Intersection Observer for Fade-in Animations
-        // ====================================================
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // ====================================================
-        // Product Category Tabs (Optional Enhancement)
-        // ====================================================
-        const categoryTabs = document.querySelectorAll('.category-tab');
-        
-        categoryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                categoryTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                // Add filtering logic here if needed
-            });
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* ====================================================
    CHANEL SPRING 2027 - SCRIPT.JS
-   Luxury Fashion Editorial Website
+   Korean Heritage × Modern Luxury
    ==================================================== */
 
 // Wait for DOM to be fully loaded
@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const journeyObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry, index) {
             if (entry.isIntersecting) {
-                // Add delay for staggered animation
                 setTimeout(function() {
                     entry.target.classList.add('visible');
                 }, index * 100);
@@ -101,34 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     journeyStages.forEach(function(stage) {
         journeyObserver.observe(stage);
-    });
-    
-    // ====================================================
-    // PRODUCT CATEGORY TABS
-    // ====================================================
-    
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const productCategories = document.querySelectorAll('.product-category');
-    
-    tabButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            
-            // Remove active class from all buttons and categories
-            tabButtons.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-            productCategories.forEach(function(cat) {
-                cat.classList.remove('active');
-            });
-            
-            // Add active class to clicked button and corresponding category
-            this.classList.add('active');
-            const targetCategory = document.getElementById('cat-' + category);
-            if (targetCategory) {
-                targetCategory.classList.add('active');
-            }
-        });
     });
     
     // ====================================================
@@ -190,6 +161,264 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ====================================================
+    // PRODUCT COLLECTION - LOAD AND DISPLAY PRODUCTS
+    // ====================================================
+    
+    const productsContainer = document.getElementById('products-container');
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    let productsData = null;
+    
+    // Category descriptions and Korean heritage keywords
+    const categoryInfo = {
+        'Womenswear': {
+            description: 'Elegant silhouettes reimagined through Korean heritage, blending timeless CHANEL craftsmanship with traditional hanbok elements.',
+            keywords: ['Hanbok Wrap', 'Norigae Detail', 'Jeogori Silhouette']
+        },
+        'Menswear': {
+            description: 'Contemporary menswear infused with Korean traditional elements, featuring refined tailoring and artisanal details.',
+            keywords: ['Hanbok Inspired', 'Durumagi Coat', 'Traditional Knot']
+        },
+        'Activewear': {
+            description: 'Performance luxury meets Korean heritage, with athletic pieces featuring traditional wrapping and closure techniques.',
+            keywords: ['Jeogori Panels', 'Norigae Ribbon', 'Traditional Pattern']
+        },
+        'Swimwear': {
+            description: 'Resort elegance with Korean lucky charm details and traditional motifs woven into modern swimwear silhouettes.',
+            keywords: ['Lucky Charm', 'Traditional Pattern', 'Heritage Detail']
+        },
+        'Innerwear': {
+            description: 'Intimate luxury inspired by hanbok seam lines and traditional Korean textile art, featuring delicate detailing.',
+            keywords: ['Hanbok Seam', 'Maehwa Blossom', 'Hanji Texture']
+        },
+        'Accessories': {
+            description: 'Statement pieces celebrating Korean craftsmanship, from binyeo-inspired hair pins to najeonchilgi-influenced designs.',
+            keywords: ['Binyeo', 'Najeonchilgi', 'Traditional Knot']
+        },
+        'Jewelry': {
+            description: 'Fine jewelry inspired by Korean royal heritage, featuring dancheong patterns and traditional motifs in precious metals.',
+            keywords: ['Dancheong', 'Plum Blossom', 'Hanok Eave']
+        },
+        'Footwear': {
+            description: 'Elegant footwear blending French sophistication with Korean-inspired floral details and norigae embellishments.',
+            keywords: ['Norigae Tassel', 'Gomusin Shape', 'Dancheong Color']
+        },
+        'Beauty': {
+            description: 'Beauty essentials housed in packaging inspired by Korean traditional lacquerware and moon jar ceramics.',
+            keywords: ['Moon Jar', 'Najeonchilgi', 'Yeonjeok Bowl']
+        },
+        'Home Textile': {
+            description: 'Luxurious home pieces featuring Korean traditional patterns and lucky charm details for refined living spaces.',
+            keywords: ['Traditional Pattern', 'Lucky Charm', 'Heritage Motif']
+        },
+        'Kidswear Girls': {
+            description: 'Playful luxury for girls, featuring hanbok-inspired silhouettes and whimsical cloud and flower appliqués.',
+            keywords: ['Hanbok Patchwork', 'Cloud Motif', 'Tweed Flowers']
+        },
+        'Kidswear Boys': {
+            description: 'Sophisticated boys\' wear with Korean heritage elements, from hanbok-inspired wraps to traditional embroidery.',
+            keywords: ['Wrap Style', 'Traditional Trim', 'Heritage Embroidery']
+        },
+        'Pet': {
+            description: 'Luxurious pet accessories inspired by Korean palace aesthetics and traditional hanok architecture.',
+            keywords: ['Hanok Silhouette', 'Moon Jar Shape', 'Norigae Tassel']
+        }
+    };
+    
+    // Convert category name to key format
+    function categoryToKey(category) {
+        return category.toLowerCase().replace(/\s+/g, '-');
+    }
+    
+    // Create product card HTML
+    function createProductCard(product) {
+        const categoryKey = categoryToKey(product.category);
+        const info = categoryInfo[product.category] || { keywords: [] };
+        const keyword = info.keywords[Math.floor(Math.random() * info.keywords.length)] || 'Korean Heritage';
+        
+        return `
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="image-placeholder">
+                        <p>${product.itemName}</p>
+                        <span>${product.imagePath}</span>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <span class="product-heritage-tag">${keyword}</span>
+                    <p class="product-style-number">${product.styleNumber}</p>
+                    <h4 class="product-name">${product.itemName}</h4>
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-meta">
+                        <div class="product-meta-row">
+                            <strong>Category</strong>
+                            <span>${product.category}</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <strong>Classification</strong>
+                            <span>${product.classification}</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <strong>Sizes</strong>
+                            <span>${product.sizes}</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <strong>Fabric / Material</strong>
+                            <span>${product.fabricMaterial}</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <strong>Color / Pattern</strong>
+                            <span>${product.colorPattern}</span>
+                        </div>
+                        <div class="product-meta-row">
+                            <strong>Order By</strong>
+                            <span>${product.orderBy}</span>
+                        </div>
+                    </div>
+                    <p class="product-price">${product.retailTicket}</p>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Create category hero card
+    function createCategoryHero(category, productCount) {
+        const info = categoryInfo[category] || { 
+            description: 'Spring 2027 Collection', 
+            keywords: ['Korean Heritage'] 
+        };
+        
+        return `
+            <div class="category-hero">
+                <div class="category-hero-content">
+                    <h3 class="category-hero-title">${category}</h3>
+                    <p class="category-hero-count">${productCount} Products</p>
+                    <p class="category-hero-description">${info.description}</p>
+                    <div class="category-hero-keywords">
+                        ${info.keywords.map(k => `<span class="heritage-keyword">${k}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="category-hero-image">
+                    <div class="image-placeholder">
+                        <p>${category}</p>
+                        <span>images/categories/${categoryToKey(category)}.jpg</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Display products for a category
+    function displayCategory(category) {
+        if (!productsData || !productsData.products) {
+            productsContainer.innerHTML = '<p class="loading-error">Unable to load products. Please refresh the page.</p>';
+            return;
+        }
+        
+        // Filter products by category
+        const categoryProducts = productsData.products.filter(function(p) {
+            return p.category === category;
+        });
+        
+        if (categoryProducts.length === 0) {
+            productsContainer.innerHTML = '<p class="no-products">No products found in this category.</p>';
+            return;
+        }
+        
+        // Build the category display
+        let html = '';
+        
+        // Category hero card
+        html += createCategoryHero(category, categoryProducts.length);
+        
+        // Product grid
+        html += '<div class="product-grid">';
+        categoryProducts.forEach(function(product) {
+            html += createProductCard(product);
+        });
+        html += '</div>';
+        
+        productsContainer.innerHTML = html;
+        
+        // Animate cards
+        const cards = productsContainer.querySelectorAll('.product-card');
+        cards.forEach(function(card, index) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(function() {
+                card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 50);
+        });
+    }
+    
+    // Category button click handler
+    categoryButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            categoryButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get category from data attribute
+            const categoryKey = this.getAttribute('data-category');
+            
+            // Convert key back to category name
+            const categoryMap = {
+                'womenswear': 'Womenswear',
+                'menswear': 'Menswear',
+                'activewear': 'Activewear',
+                'swimwear': 'Swimwear',
+                'innerwear': 'Innerwear',
+                'accessories': 'Accessories',
+                'jewelry': 'Jewelry',
+                'footwear': 'Footwear',
+                'beauty': 'Beauty',
+                'home-textile': 'Home Textile',
+                'kidswear-girls': 'Kidswear Girls',
+                'kidswear-boys': 'Kidswear Boys',
+                'pet': 'Pet'
+            };
+            
+            const category = categoryMap[categoryKey] || categoryKey;
+            displayCategory(category);
+        });
+    });
+    
+    // Load products from JSON
+    function loadProducts() {
+        productsContainer.innerHTML = '<p class="loading-text">Loading collection...</p>';
+        
+        fetch('products.json')
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('Failed to load products');
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                productsData = data;
+                // Display Womenswear by default
+                displayCategory('Womenswear');
+            })
+            .catch(function(error) {
+                console.error('Error loading products:', error);
+                productsContainer.innerHTML = `
+                    <div class="loading-error">
+                        <p>Unable to load products data.</p>
+                        <p>Please ensure products.json is in the same directory as index.html</p>
+                    </div>
+                `;
+            });
+    }
+    
+    // Initialize products
+    loadProducts();
+    
+    // ====================================================
     // CIRCULAR PILLARS HOVER EFFECT
     // ====================================================
     
@@ -201,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         pillar.addEventListener('mouseleave', function() {
-            this.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+            this.style.borderColor = 'rgba(255, 255, 255, 0.1)';
         });
     });
     
@@ -262,6 +491,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ====================================================
+    // TRACE BLOCKS ANIMATION
+    // ====================================================
+    
+    const traceBlocks = document.querySelectorAll('.trace-block');
+    
+    const traceObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    traceBlocks.forEach(function(block) {
+        traceObserver.observe(block);
+    });
+    
+    // ====================================================
     // KEYWORDS RIPPLE EFFECT
     // ====================================================
     
@@ -272,81 +521,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ====================================================
-    // PRODUCT CARDS HOVER TILT EFFECT
-    // ====================================================
-    
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 50;
-            const rotateY = (centerX - x) / 50;
-            
-            card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-5px)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
-    });
-    
-    // ====================================================
-    // MOODBOARD ITEMS PARALLAX EFFECT
-    // ====================================================
-    
-    const moodItems = document.querySelectorAll('.mood-item');
-    
-    moodItems.forEach(function(item) {
-        item.addEventListener('mousemove', function(e) {
-            const rect = item.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width;
-            const y = (e.clientY - rect.top) / rect.height;
-            
-            const img = item.querySelector('img');
-            if (img) {
-                img.style.transform = 'scale(1.1) translate(' + ((x - 0.5) * 10) + 'px, ' + ((y - 0.5) * 10) + 'px)';
-            }
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            const img = item.querySelector('img');
-            if (img) {
-                img.style.transform = 'scale(1)';
-            }
-        });
-    });
-    
-    // ====================================================
-    // SCROLL PROGRESS INDICATOR (OPTIONAL)
-    // ====================================================
-    
-    // Uncomment below to add a scroll progress bar at the top
-    /*
-    const progressBar = document.createElement('div');
-    progressBar.style.cssText = 'position: fixed; top: 0; left: 0; height: 2px; background: var(--color-gold); z-index: 9999; transition: width 0.1s;';
-    document.body.appendChild(progressBar);
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        progressBar.style.width = scrollPercent + '%';
-    });
-    */
-    
-    // ====================================================
     // CONSOLE MESSAGE
     // ====================================================
     
     console.log('%cCHANEL Spring 2027', 'font-family: Georgia, serif; font-size: 24px; color: #c9a959;');
     console.log('%cTimeless Circular Luxury', 'font-family: Arial, sans-serif; font-size: 12px; color: #9a9a9a;');
-    console.log('%cFIT SUNY Korea | Fashion Business Management', 'font-family: Arial, sans-serif; font-size: 10px; color: #666;');
+    console.log('%cKorean Heritage Reimagined', 'font-family: Arial, sans-serif; font-size: 12px; color: #9D202F;');
+    console.log('%cFIT SUNY Korea | FM109', 'font-family: Arial, sans-serif; font-size: 10px; color: #666;');
     
 });

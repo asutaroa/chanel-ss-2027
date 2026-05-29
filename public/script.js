@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadProducts() {
         productsContainer.innerHTML = '<p class="loading-text">Loading collection...</p>';
         
-        fetch('products.json')
+        fetch('./products.json')
             .then(function(response) {
                 if (!response.ok) {
                     throw new Error('Failed to load products');

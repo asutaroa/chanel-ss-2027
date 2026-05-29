@@ -1245,10 +1245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return '<div class="product-card">' +
             '<div class="product-image">' +
-                '<div class="image-placeholder">' +
-                    '<p>' + product.itemName + '</p>' +
-                    '<span>' + product.imagePath + '</span>' +
-                '</div>' +
+                '<img src="' + product.imagePath + '" alt="' + product.itemName + '" onerror="this.onerror=null; this.parentElement.innerHTML=\'<div class=image-placeholder><p>' + product.itemName.replace(/'/g, "\\'") + '</p></div>\';">' +
             '</div>' +
             '<div class="product-details">' +
                 '<span class="product-heritage-tag">' + keyword + '</span>' +

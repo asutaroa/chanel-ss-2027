@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHANEL Spring 2027 | Timeless Circular Luxury</title>
-    <meta name="description" content="FIT SUNY Korea Fashion Business Management Final Project - CHANEL Spring 2027 Circular Luxury Strategy">
+    <meta name="description" content="FIT SUNY Korea FM109 Final Project - CHANEL Spring 2027: Korean Heritage Reimagined Through Modern Luxury">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+KR:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -30,10 +30,11 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#company">Profile</a></li>
                 <li><a href="#vision">Vision</a></li>
+                <li><a href="#palette">Palette</a></li>
                 <li><a href="#moodboard">Moodboard</a></li>
                 <li><a href="#journey">Journey</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#supply-chain">Supply Chain</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#traceability">Traceability</a></li>
                 <li><a href="#circular">Circular</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -45,13 +46,18 @@
          ==================================================== -->
     <section class="hero" id="hero">
         <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow">FIT SUNY Korea | Fashion Business Management</p>
+            <div class="hero-course-info">
+                <p>FM109 First Year Experience II</p>
+                <p>Professor Hye Yeon Jeong</p>
+                <p>FIT SUNY Korea</p>
+            </div>
             
-            <!-- EDIT HERO TEXT HERE -->
             <h1 class="hero-title">CHANEL</h1>
             <p class="hero-subtitle">Spring 2027</p>
             <p class="hero-tagline">Timeless Circular Luxury</p>
+            <p class="hero-concept">Korean Heritage Reimagined</p>
             
             <div class="hero-statement">
                 <p>Where heritage meets tomorrow. A vision of luxury that transcends seasons, 
@@ -64,6 +70,10 @@
                 <div class="scroll-arrow"></div>
             </a>
         </div>
+        
+        <!-- Korean motif decoration -->
+        <div class="hero-motif hero-motif-left"></div>
+        <div class="hero-motif hero-motif-right"></div>
     </section>
 
     <!-- ====================================================
@@ -76,7 +86,6 @@
                 <h2 class="section-title">The House of CHANEL</h2>
             </div>
 
-            <!-- EDIT COMPANY HISTORY HERE -->
             <div class="profile-intro">
                 <div class="profile-text">
                     <h3>Brand History</h3>
@@ -97,7 +106,6 @@
 
             <!-- Brand Positioning Grid -->
             <div class="profile-grid">
-                <!-- EDIT TARGET CUSTOMER HERE -->
                 <div class="profile-card">
                     <h4>Target Customer</h4>
                     <p>Sophisticated, independent women aged 30-55 who value timeless elegance 
@@ -105,7 +113,6 @@
                     and appreciate the heritage of true luxury craftsmanship.</p>
                 </div>
 
-                <!-- EDIT BRAND POSITIONING HERE -->
                 <div class="profile-card">
                     <h4>Brand Positioning</h4>
                     <p>Ultra-luxury positioning at the pinnacle of the fashion hierarchy. 
@@ -113,7 +120,6 @@
                     unique heritage of liberating, elegant femininity.</p>
                 </div>
 
-                <!-- EDIT RETAIL STRATEGY HERE -->
                 <div class="profile-card">
                     <h4>Retail Strategy</h4>
                     <p>Exclusively operated boutiques in prime luxury locations worldwide. 
@@ -121,7 +127,6 @@
                     brand equity and customer experience.</p>
                 </div>
 
-                <!-- EDIT GLOBAL PRESENCE HERE -->
                 <div class="profile-card">
                     <h4>Global Presence</h4>
                     <p><strong>Worldwide:</strong> 310+ boutiques across 40+ countries<br>
@@ -134,42 +139,51 @@
             <div class="financial-section">
                 <h3 class="financial-title">Financial Performance</h3>
                 
-                <!-- EDIT FINANCIAL DATA HERE -->
                 <div class="financial-grid">
                     <div class="financial-card">
-                        <p class="financial-year">2024</p>
+                        <p class="financial-year">FY 2022</p>
+                        <p class="financial-amount">$17.2B</p>
+                        <p class="financial-label">Revenue</p>
+                    </div>
+                    <div class="financial-card">
+                        <p class="financial-year">FY 2023</p>
                         <p class="financial-amount">$19.7B</p>
                         <p class="financial-label">Revenue</p>
                     </div>
                     <div class="financial-card">
-                        <p class="financial-year">2025</p>
-                        <p class="financial-amount">$21.2B</p>
+                        <p class="financial-year">FY 2024</p>
+                        <p class="financial-amount">$20.0B</p>
                         <p class="financial-label">Revenue</p>
-                    </div>
-                    <div class="financial-card">
-                        <p class="financial-year">2026</p>
-                        <p class="financial-amount">$23.1B</p>
-                        <p class="financial-label">Projected</p>
                     </div>
                 </div>
 
-                <!-- Chart Placeholder -->
-                <div class="chart-placeholder">
+                <!-- Revenue Chart -->
+                <div class="chart-container">
                     <div class="chart-bars">
-                        <div class="chart-bar" data-height="70">
-                            <div class="chart-bar-fill"></div>
-                            <span class="chart-label">2024</span>
+                        <div class="chart-bar-wrapper">
+                            <div class="chart-value">$17.2B</div>
+                            <div class="chart-bar" data-height="70">
+                                <div class="chart-bar-fill"></div>
+                            </div>
+                            <span class="chart-label">FY 2022</span>
                         </div>
-                        <div class="chart-bar" data-height="82">
-                            <div class="chart-bar-fill"></div>
-                            <span class="chart-label">2025</span>
+                        <div class="chart-bar-wrapper">
+                            <div class="chart-value">$19.7B</div>
+                            <div class="chart-bar" data-height="85">
+                                <div class="chart-bar-fill"></div>
+                            </div>
+                            <span class="chart-label">FY 2023</span>
                         </div>
-                        <div class="chart-bar" data-height="95">
-                            <div class="chart-bar-fill"></div>
-                            <span class="chart-label">2026</span>
+                        <div class="chart-bar-wrapper">
+                            <div class="chart-value">$20.0B</div>
+                            <div class="chart-bar" data-height="88">
+                                <div class="chart-bar-fill"></div>
+                            </div>
+                            <span class="chart-label">FY 2024</span>
                         </div>
                     </div>
                     <p class="chart-caption">Revenue Growth (in billions USD)</p>
+                    <p class="chart-note">*Final values should be verified prior to submission.</p>
                 </div>
             </div>
         </div>
@@ -185,7 +199,6 @@
                 <h2 class="section-title">Seasonal Brand Vision</h2>
             </div>
 
-            <!-- EDIT VISION STATEMENT HERE -->
             <div class="vision-statement">
                 <blockquote>
                     "Luxury that lives beyond seasons."
@@ -197,7 +210,6 @@
 
             <!-- Concept Keywords -->
             <div class="vision-keywords">
-                <!-- EDIT KEYWORDS HERE -->
                 <span class="keyword">Emotional Durability</span>
                 <span class="keyword">Timeless Craft</span>
                 <span class="keyword">Circular Heritage</span>
@@ -207,7 +219,6 @@
 
             <!-- Strategic Vision Grid -->
             <div class="vision-grid">
-                <!-- EDIT CONSUMER NEEDS HERE -->
                 <div class="vision-card">
                     <h4>Consumer Emotional Needs</h4>
                     <p>Today's luxury consumer seeks meaning beyond materialism. They desire 
@@ -215,7 +226,6 @@
                     values of sustainability without sacrificing beauty or status.</p>
                 </div>
 
-                <!-- EDIT TREND DIRECTION HERE -->
                 <div class="vision-card">
                     <h4>Trend Direction</h4>
                     <p>Movement away from seasonal obsolescence toward investment dressing. 
@@ -223,7 +233,6 @@
                     craftsmanship, provenance, and timeless silhouettes.</p>
                 </div>
 
-                <!-- EDIT LIFESTYLE INSPIRATION HERE -->
                 <div class="vision-card">
                     <h4>Fashion &amp; Lifestyle Inspiration</h4>
                     <p>The modern flaneuse—cultured, curious, conscious. She curates her 
@@ -231,7 +240,6 @@
                     and sees her style as an extension of her ethics.</p>
                 </div>
 
-                <!-- EDIT POSITIONING STRATEGY HERE -->
                 <div class="vision-card">
                     <h4>Luxury Positioning Strategy</h4>
                     <p>Leading the industry in demonstrating that true luxury is inherently 
@@ -243,92 +251,95 @@
     </section>
 
     <!-- ====================================================
-         4. COLOR BOARD / MOODBOARD SECTION
+         4. SPRING 2027 COLOR PALETTE
          ==================================================== -->
-    <section class="section" id="moodboard">
+    <section class="section" id="palette">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow">Creative Direction</p>
-                <h2 class="section-title">Moodboard</h2>
+                <h2 class="section-title">Spring 2027 Color Palette</h2>
             </div>
 
-            <!-- Color Palette -->
-            <div class="color-palette">
-                <h3 class="palette-title">Spring 2027 Palette</h3>
-                <div class="colors">
-                    <!-- EDIT COLORS HERE -->
-                    <div class="color-swatch">
-                        <div class="swatch" style="background: #FFFFF0;"></div>
-                        <p>Ivory</p>
+            <div class="palette-container">
+                <div class="palette-grid">
+                    <!-- Snow White -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #F5F2EA;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Snow White</p>
+                            <p class="swatch-pantone">PANTONE 11-0602 TCX</p>
+                            <p class="swatch-hex">#F5F2EA</p>
+                        </div>
                     </div>
-                    <div class="color-swatch">
-                        <div class="swatch" style="background: #1A1A1A;"></div>
-                        <p>Noir</p>
+                    
+                    <!-- Barely Pink -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #F0D7D8;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Barely Pink</p>
+                            <p class="swatch-pantone">PANTONE 12-2906 TPG</p>
+                            <p class="swatch-hex">#F0D7D8</p>
+                        </div>
                     </div>
-                    <div class="color-swatch">
-                        <div class="swatch" style="background: #F5F5F5;"></div>
-                        <p>Pearl</p>
+                    
+                    <!-- Pastel Yellow -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #F3E8A6;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Pastel Yellow</p>
+                            <p class="swatch-pantone">PANTONE 11-0616 TCX</p>
+                            <p class="swatch-hex">#F3E8A6</p>
+                        </div>
                     </div>
-                    <div class="color-swatch">
-                        <div class="swatch" style="background: #D4C4B0;"></div>
-                        <p>Soft Beige</p>
+                    
+                    <!-- Ice Castle -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #DDE8E8;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Ice Castle</p>
+                            <p class="swatch-pantone">PANTONE 11-4606 TCX</p>
+                            <p class="swatch-hex">#DDE8E8</p>
+                        </div>
                     </div>
-                    <div class="color-swatch">
-                        <div class="swatch" style="background: #C9A962;"></div>
-                        <p>Vintage Gold</p>
+                    
+                    <!-- Scarlet Sage -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #9D202F;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Scarlet Sage</p>
+                            <p class="swatch-pantone">PANTONE 19-1559 TCX</p>
+                            <p class="swatch-hex">#9D202F</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Moodboard Grid -->
-            <!-- 
-                IMAGE FOLDER STRUCTURE:
-                images/
-                └── moodboard/
-                    ├── mood-1.jpg (runway inspiration)
-                    ├── mood-2.jpg (fashion textures)
-                    ├── mood-3.jpg (tweed inspiration)
-                    ├── mood-4.jpg (atelier imagery)
-                    ├── mood-5.jpg (archival photography)
-                    └── mood-6.jpg (luxury interiors)
-            -->
-            <div class="moodboard-grid">
-                <!-- EDIT MOODBOARD IMAGES HERE -->
-                <div class="mood-item mood-large">
-                    <div class="mood-placeholder">
-                        <p>Runway Inspiration</p>
-                        <span>images/moodboard/mood-1.jpg</span>
+                    
+                    <!-- Emerald -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #009473;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Emerald</p>
+                            <p class="swatch-pantone">PANTONE 17-5641 TCX</p>
+                            <p class="swatch-hex">#009473</p>
+                        </div>
                     </div>
-                    <!-- Replace placeholder div with: <img src="images/moodboard/mood-1.jpg" alt="Runway inspiration"> -->
-                </div>
-                <div class="mood-item">
-                    <div class="mood-placeholder">
-                        <p>Tweed Textures</p>
-                        <span>images/moodboard/mood-2.jpg</span>
+                    
+                    <!-- Clematis Blue -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #363B7C;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Clematis Blue</p>
+                            <p class="swatch-pantone">PANTONE 19-3951 TCX</p>
+                            <p class="swatch-hex">#363B7C</p>
+                        </div>
                     </div>
-                </div>
-                <div class="mood-item">
-                    <div class="mood-placeholder">
-                        <p>Atelier Craft</p>
-                        <span>images/moodboard/mood-3.jpg</span>
-                    </div>
-                </div>
-                <div class="mood-item mood-tall">
-                    <div class="mood-placeholder">
-                        <p>Archival Beauty</p>
-                        <span>images/moodboard/mood-4.jpg</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <div class="mood-placeholder">
-                        <p>Heritage Details</p>
-                        <span>images/moodboard/mood-5.jpg</span>
-                    </div>
-                </div>
-                <div class="mood-item">
-                    <div class="mood-placeholder">
-                        <p>Luxury Spaces</p>
-                        <span>images/moodboard/mood-6.jpg</span>
+                    
+                    <!-- Tap Shoe -->
+                    <div class="palette-swatch">
+                        <div class="swatch-color" style="background-color: #2A2A2A;"></div>
+                        <div class="swatch-info">
+                            <p class="swatch-name">Tap Shoe</p>
+                            <p class="swatch-pantone">PANTONE 19-4004 TCX</p>
+                            <p class="swatch-hex">#2A2A2A</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,9 +347,35 @@
     </section>
 
     <!-- ====================================================
-         5. CUSTOMER JOURNEY EXPERIENCE
+         5. MOODBOARD SECTION
          ==================================================== -->
-    <section class="section section-alt" id="journey">
+    <section class="section section-alt" id="moodboard">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Creative Direction</p>
+                <h2 class="section-title">Moodboard</h2>
+            </div>
+
+            <!-- Single Large Moodboard Image -->
+            <div class="moodboard-single">
+                <!-- Replace this with the final team moodboard image -->
+                <div class="moodboard-wrapper">
+                    <div class="moodboard-placeholder">
+                        <p>Spring 2027 Moodboard</p>
+                        <span>Korean Heritage × CHANEL</span>
+                        <p class="moodboard-path">images/moodboard/team-moodboard.jpg</p>
+                    </div>
+                    <!-- Replace placeholder with: <img src="images/moodboard/team-moodboard.jpg" alt="Spring 2027 Moodboard - Korean Heritage × CHANEL"> -->
+                </div>
+                <p class="moodboard-caption">Spring 2027 Moodboard — Korean Heritage × CHANEL</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         6. CUSTOMER JOURNEY EXPERIENCE
+         ==================================================== -->
+    <section class="section" id="journey">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow">Experience</p>
@@ -347,8 +384,6 @@
             </div>
 
             <div class="journey-timeline">
-                <!-- EDIT JOURNEY STAGES HERE -->
-                
                 <div class="journey-stage">
                     <div class="stage-number">01</div>
                     <div class="stage-content">
@@ -433,583 +468,424 @@
     </section>
 
     <!-- ====================================================
-         6. PRODUCT CATEGORY & STYLE SHEETS
+         7. COLLECTION / PRODUCT STYLE SHEETS
          ==================================================== -->
-    <section class="section" id="products">
+    <section class="section section-dark" id="collection">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow">Collection</p>
                 <h2 class="section-title">Product Style Sheets</h2>
-                <p class="section-subtitle">Spring 2027 Collection Overview</p>
+                <p class="section-subtitle">Spring 2027 Collection — 75 Products</p>
             </div>
 
-            <!-- Product Category Tabs -->
-            <div class="product-tabs">
-                <button class="tab-btn active" data-category="rtw">Ready-to-Wear</button>
-                <button class="tab-btn" data-category="bags">Bags</button>
-                <button class="tab-btn" data-category="shoes">Shoes</button>
-                <button class="tab-btn" data-category="accessories">Accessories</button>
-                <button class="tab-btn" data-category="beauty">Beauty</button>
+            <!-- Category Navigation -->
+            <div class="category-nav">
+                <button class="category-btn active" data-category="womenswear">Womenswear <span class="count">10</span></button>
+                <button class="category-btn" data-category="menswear">Menswear <span class="count">5</span></button>
+                <button class="category-btn" data-category="activewear">Activewear <span class="count">5</span></button>
+                <button class="category-btn" data-category="swimwear">Swimwear <span class="count">5</span></button>
+                <button class="category-btn" data-category="innerwear">Innerwear <span class="count">5</span></button>
+                <button class="category-btn" data-category="accessories">Accessories <span class="count">10</span></button>
+                <button class="category-btn" data-category="jewelry">Jewelry <span class="count">5</span></button>
+                <button class="category-btn" data-category="footwear">Footwear <span class="count">5</span></button>
+                <button class="category-btn" data-category="beauty">Beauty <span class="count">5</span></button>
+                <button class="category-btn" data-category="home-textile">Home Textile <span class="count">5</span></button>
+                <button class="category-btn" data-category="kidswear-girls">Kidswear Girls <span class="count">5</span></button>
+                <button class="category-btn" data-category="kidswear-boys">Kidswear Boys <span class="count">5</span></button>
+                <button class="category-btn" data-category="pet">Pet <span class="count">5</span></button>
             </div>
 
-            <!-- 
-                IMAGE FOLDER STRUCTURE:
-                images/
-                └── products/
-                    ├── rtw-1.jpg
-                    ├── rtw-2.jpg
-                    ├── bag-1.jpg
-                    ├── shoe-1.jpg
-                    ├── acc-1.jpg
-                    └── beauty-1.jpg
-            -->
-
-            <!-- Ready-to-Wear Products -->
-            <div class="product-category active" id="cat-rtw">
-                <div class="product-grid">
-                    
-                    <!-- PRODUCT 1 - EDIT HERE -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/rtw-1.jpg</span>
-                            </div>
-                            <!-- INSERT STUDENT PRODUCT IMAGE HERE -->
-                            <!-- Replace placeholder with: <img src="images/products/rtw-1.jpg" alt="Classic Tweed Jacket"> -->
-                        </div>
-                        <div class="product-details">
-                            <!-- EDIT PRODUCT INFORMATION HERE -->
-                            <h4 class="product-name">Classic Tweed Jacket</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-RTW-S27-001</p>
-                                <p><strong>Classification:</strong> Outerwear / Jacket</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Fabric:</strong> 65% Wool, 25% Cotton, 10% Silk — Lesage Tweed</p>
-                                <p><strong>Color Story:</strong> Ivory &amp; Noir with Gold Thread</p>
-                                <p><strong>Price Point:</strong> $8,500 - $12,000</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> Core luxury client seeking investment piece</p>
-                                <p><strong>Trend Inspiration:</strong> Quiet luxury, heritage revival</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> Traceable Scottish wool, artisan woven</p>
-                                <p><strong>Circular Strategy:</strong> Lifetime repair service, resale authentication</p>
-                                <p><strong>Supply Chain:</strong> Tier 4 Scotland → Tier 1 Paris Atelier</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PRODUCT 2 - EDIT HERE -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/rtw-2.jpg</span>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-name">Little Black Dress</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-RTW-S27-002</p>
-                                <p><strong>Classification:</strong> Dresses / Evening</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Fabric:</strong> 100% Silk Crepe — Italian Mill</p>
-                                <p><strong>Color Story:</strong> Timeless Noir</p>
-                                <p><strong>Price Point:</strong> $6,200 - $8,500</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> Fashion-forward professional</p>
-                                <p><strong>Trend Inspiration:</strong> Minimalist elegance, modern femininity</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> GOTS certified organic silk</p>
-                                <p><strong>Circular Strategy:</strong> Alterations program, heritage archive</p>
-                                <p><strong>Supply Chain:</strong> Tier 4 Italy → Tier 1 Paris</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PRODUCT 3 - DUPLICATE THIS CARD FOR MORE PRODUCTS -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/rtw-3.jpg</span>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-name">[Product Name]</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-RTW-S27-XXX</p>
-                                <p><strong>Classification:</strong> [Category]</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Fabric:</strong> [Composition]</p>
-                                <p><strong>Color Story:</strong> [Color Name]</p>
-                                <p><strong>Price Point:</strong> $X,XXX</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> [Description]</p>
-                                <p><strong>Trend Inspiration:</strong> [Trends]</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> [Details]</p>
-                                <p><strong>Circular Strategy:</strong> [Strategy]</p>
-                                <p><strong>Supply Chain:</strong> [Notes]</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bags Products -->
-            <div class="product-category" id="cat-bags">
-                <div class="product-grid">
-                    <!-- BAGS PRODUCT 1 - EDIT HERE -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/bag-1.jpg</span>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-name">Classic Flap Bag</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-BAG-S27-001</p>
-                                <p><strong>Classification:</strong> Handbags / Shoulder</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Material:</strong> Lambskin Leather — French Tannery</p>
-                                <p><strong>Color Story:</strong> Caviar Black with Gold Hardware</p>
-                                <p><strong>Price Point:</strong> $10,200 - $11,500</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> Investment buyer, collector</p>
-                                <p><strong>Trend Inspiration:</strong> Heritage icon, timeless investment</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> LWG Gold-rated leather</p>
-                                <p><strong>Circular Strategy:</strong> Lifetime spa service, authentication</p>
-                                <p><strong>Supply Chain:</strong> Tier 4 France → Tier 1 Italy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Shoes Products -->
-            <div class="product-category" id="cat-shoes">
-                <div class="product-grid">
-                    <!-- SHOES PRODUCT 1 - EDIT HERE -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/shoe-1.jpg</span>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-name">Two-Tone Slingback</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-SHO-S27-001</p>
-                                <p><strong>Classification:</strong> Footwear / Heels</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Material:</strong> Lambskin &amp; Grosgrain — Italian Craft</p>
-                                <p><strong>Color Story:</strong> Beige &amp; Noir Classic</p>
-                                <p><strong>Price Point:</strong> $1,150 - $1,350</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> Style-conscious professional</p>
-                                <p><strong>Trend Inspiration:</strong> Iconic silhouette, ballet influence</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> Vegetable-tanned leather</p>
-                                <p><strong>Circular Strategy:</strong> Resoling program available</p>
-                                <p><strong>Supply Chain:</strong> Tier 4 Italy → Tier 1 Italy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Accessories Products -->
-            <div class="product-category" id="cat-accessories">
-                <div class="product-grid">
-                    <!-- ACCESSORIES PRODUCT 1 - EDIT HERE -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/acc-1.jpg</span>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-name">Pearl CC Earrings</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-ACC-S27-001</p>
-                                <p><strong>Classification:</strong> Jewelry / Earrings</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Material:</strong> Gold-Plated Metal &amp; Glass Pearls</p>
-                                <p><strong>Color Story:</strong> Vintage Gold &amp; Cream Pearl</p>
-                                <p><strong>Price Point:</strong> $850 - $1,200</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> Entry luxury, gifting market</p>
-                                <p><strong>Trend Inspiration:</strong> Logo renaissance, pearl revival</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> Recycled brass base</p>
-                                <p><strong>Circular Strategy:</strong> Replating service offered</p>
-                                <p><strong>Supply Chain:</strong> Tier 3 France → Tier 1 France</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Beauty Products -->
-            <div class="product-category" id="cat-beauty">
-                <div class="product-grid">
-                    <!-- BEAUTY PRODUCT 1 - EDIT HERE -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <p>Product Image</p>
-                                <span>images/products/beauty-1.jpg</span>
-                            </div>
-                        </div>
-                        <div class="product-details">
-                            <h4 class="product-name">Rouge Coco Bloom</h4>
-                            <div class="product-meta">
-                                <p><strong>Style Number:</strong> CC-BTY-S27-001</p>
-                                <p><strong>Classification:</strong> Makeup / Lips</p>
-                            </div>
-                            <div class="product-specs">
-                                <p><strong>Formula:</strong> Plumping Lip Colour</p>
-                                <p><strong>Color Story:</strong> Seasonal Nude to Bold Palette</p>
-                                <p><strong>Price Point:</strong> $45 - $52</p>
-                            </div>
-                            <div class="product-strategy">
-                                <p><strong>Target Customer:</strong> Broad luxury beauty consumer</p>
-                                <p><strong>Trend Inspiration:</strong> Clean beauty meets luxury</p>
-                            </div>
-                            <div class="product-sustainability">
-                                <p><strong>Sustainability:</strong> Refillable packaging design</p>
-                                <p><strong>Circular Strategy:</strong> Refill program, recyclable case</p>
-                                <p><strong>Supply Chain:</strong> Tier 3 France → Tier 1 France</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Products Container - Will be populated by JavaScript from products.json -->
+            <div id="products-container">
+                <!-- Products will be dynamically loaded here -->
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         7. SUPPLY CHAIN TRACEABILITY
+         8. SUPPLY CHAIN TRACEABILITY
          ==================================================== -->
-    <section class="section section-dark" id="supply-chain">
+    <section class="section" id="traceability">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow">Transparency</p>
                 <h2 class="section-title">Supply Chain Traceability</h2>
-                <p class="section-subtitle">From Raw Materials to Customer Experience</p>
+                <p class="section-subtitle">Each team member selects one developed item and traces it through Tier 2, Tier 1, and Tier 0.</p>
             </div>
 
-            <!-- 
-                IMAGE FOLDER STRUCTURE:
-                images/
-                └── supply-chain/
-                    ├── tier-4.jpg (raw materials)
-                    ├── tier-3.jpg (textile mills)
-                    ├── tier-2.jpg (components)
-                    ├── tier-1.jpg (manufacturing)
-                    └── tier-0.jpg (retail)
-            -->
-
-            <div class="supply-chain-flow">
+            <div class="traceability-grid">
                 
-                <!-- TIER 4 - RAW MATERIALS - EDIT HERE -->
-                <div class="tier-card">
-                    <div class="tier-header">
-                        <span class="tier-number">T4</span>
-                        <h3>Raw Materials</h3>
-                    </div>
-                    <div class="tier-content">
-                        <div class="tier-image">
+                <!-- Juha Kim's Product Traceability -->
+                <div class="trace-block">
+                    <div class="trace-product">
+                        <div class="trace-product-image">
                             <div class="image-placeholder">
-                                <p>Tier 4 Image</p>
-                                <span>images/supply-chain/tier-4.jpg</span>
+                                <p>Product Image</p>
+                                <span>images/traceability/juha.jpg</span>
                             </div>
-                            <!-- Replace with: <img src="images/supply-chain/tier-4.jpg" alt="Raw materials"> -->
+                            <!-- Replace with: <img src="images/traceability/juha.jpg" alt="Juha Kim's Product"> -->
                         </div>
-                        <div class="tier-details">
-                            <!-- EDIT TIER 4 DETAILS HERE -->
-                            <div class="detail-row">
-                                <strong>Supplier:</strong>
-                                <span>[Supplier Name]</span>
+                        <div class="trace-product-info">
+                            <h4 class="trace-designer">Juha Kim</h4>
+                            <p class="trace-product-name">[Selected Product Name]</p>
+                            <p class="trace-category">[Category]</p>
+                            <p class="trace-concept">[Concept Summary - Korean Heritage element incorporated]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trace-flow">
+                        <!-- Tier 2 -->
+                        <div class="trace-tier">
+                            <div class="tier-badge">T2</div>
+                            <div class="tier-info">
+                                <h5>Components &amp; Hardware</h5>
+                                <div class="tier-field">
+                                    <strong>Supplier:</strong>
+                                    <span>[Supplier Name]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Country of Origin:</strong>
+                                    <span>[Country]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Material / Component:</strong>
+                                    <span>[Details]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Sustainability &amp; Circular Strategy:</strong>
+                                    <span>[Combined sustainability and circular details]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Why Selected:</strong>
+                                    <span>[Reason for selecting this supplier]</span>
+                                </div>
+                                <div class="tier-field reference">
+                                    <strong>APA Reference:</strong>
+                                    <span>[Author. (Year). Title. Source.]</span>
+                                </div>
                             </div>
-                            <div class="detail-row">
-                                <strong>Location:</strong>
-                                <span>Scotland, United Kingdom</span>
+                        </div>
+                        
+                        <div class="tier-connector-vertical"></div>
+                        
+                        <!-- Tier 1 -->
+                        <div class="trace-tier">
+                            <div class="tier-badge">T1</div>
+                            <div class="tier-info">
+                                <h5>Manufacturing &amp; Assembly</h5>
+                                <div class="tier-field">
+                                    <strong>Manufacturer:</strong>
+                                    <span>[Manufacturer Name]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Country of Origin:</strong>
+                                    <span>[Country]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Process Details:</strong>
+                                    <span>[Manufacturing process]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Sustainability &amp; Circular Strategy:</strong>
+                                    <span>[Combined sustainability and circular details]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Why Selected:</strong>
+                                    <span>[Reason for selecting this manufacturer]</span>
+                                </div>
+                                <div class="tier-field reference">
+                                    <strong>APA Reference:</strong>
+                                    <span>[Author. (Year). Title. Source.]</span>
+                                </div>
                             </div>
-                            <div class="detail-row">
-                                <strong>Materials:</strong>
-                                <span>Scottish Wool, Organic Cotton, Raw Silk</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Sustainability:</strong>
-                                <span>ZQ Merino certified, regenerative farming practices</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Craftsmanship:</strong>
-                                <span>Heritage sheep farming, 200+ year tradition</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Circular Connection:</strong>
-                                <span>Fully biodegradable natural fibers</span>
-                            </div>
-                            <div class="detail-row reference">
-                                <strong>APA Reference:</strong>
-                                <span>[Author. (Year). Title. Source.]</span>
+                        </div>
+                        
+                        <div class="tier-connector-vertical"></div>
+                        
+                        <!-- Tier 0 -->
+                        <div class="trace-tier">
+                            <div class="tier-badge">T0</div>
+                            <div class="tier-info">
+                                <h5>Retail &amp; Customer</h5>
+                                <div class="tier-field">
+                                    <strong>Retail Channel:</strong>
+                                    <span>[Retail Details]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Locations:</strong>
+                                    <span>[Primary Markets]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Customer Experience:</strong>
+                                    <span>[Experience Details]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Sustainability &amp; Circular Strategy:</strong>
+                                    <span>[Combined sustainability and circular details]</span>
+                                </div>
+                                <div class="tier-field">
+                                    <strong>Why Selected:</strong>
+                                    <span>[Reason for retail approach]</span>
+                                </div>
+                                <div class="tier-field reference">
+                                    <strong>APA Reference:</strong>
+                                    <span>[Author. (Year). Title. Source.]</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tier-connector">
-                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
-                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
-                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
-                        </svg>
+                </div>
+
+                <!-- Jisoo Lee's Product Traceability -->
+                <div class="trace-block">
+                    <div class="trace-product">
+                        <div class="trace-product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/traceability/jisoo.jpg</span>
+                            </div>
+                        </div>
+                        <div class="trace-product-info">
+                            <h4 class="trace-designer">Jisoo Lee</h4>
+                            <p class="trace-product-name">[Selected Product Name]</p>
+                            <p class="trace-category">[Category]</p>
+                            <p class="trace-concept">[Concept Summary]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trace-flow">
+                        <div class="trace-tier">
+                            <div class="tier-badge">T2</div>
+                            <div class="tier-info">
+                                <h5>Components &amp; Hardware</h5>
+                                <div class="tier-field"><strong>Supplier:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Material / Component:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T1</div>
+                            <div class="tier-info">
+                                <h5>Manufacturing &amp; Assembly</h5>
+                                <div class="tier-field"><strong>Manufacturer:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Process Details:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T0</div>
+                            <div class="tier-info">
+                                <h5>Retail &amp; Customer</h5>
+                                <div class="tier-field"><strong>Retail Channel:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Locations:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Customer Experience:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diane Kim's Product Traceability -->
+                <div class="trace-block">
+                    <div class="trace-product">
+                        <div class="trace-product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/traceability/diane.jpg</span>
+                            </div>
+                        </div>
+                        <div class="trace-product-info">
+                            <h4 class="trace-designer">Diane Kim</h4>
+                            <p class="trace-product-name">[Selected Product Name]</p>
+                            <p class="trace-category">[Category]</p>
+                            <p class="trace-concept">[Concept Summary]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trace-flow">
+                        <div class="trace-tier">
+                            <div class="tier-badge">T2</div>
+                            <div class="tier-info">
+                                <h5>Components &amp; Hardware</h5>
+                                <div class="tier-field"><strong>Supplier:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Material / Component:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T1</div>
+                            <div class="tier-info">
+                                <h5>Manufacturing &amp; Assembly</h5>
+                                <div class="tier-field"><strong>Manufacturer:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Process Details:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T0</div>
+                            <div class="tier-info">
+                                <h5>Retail &amp; Customer</h5>
+                                <div class="tier-field"><strong>Retail Channel:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Locations:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Customer Experience:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alex Moon's Product Traceability -->
+                <div class="trace-block">
+                    <div class="trace-product">
+                        <div class="trace-product-image">
+                            <div class="image-placeholder">
+                                <p>Product Image</p>
+                                <span>images/traceability/alex.jpg</span>
+                            </div>
+                        </div>
+                        <div class="trace-product-info">
+                            <h4 class="trace-designer">Alex Moon</h4>
+                            <p class="trace-product-name">[Selected Product Name]</p>
+                            <p class="trace-category">[Category]</p>
+                            <p class="trace-concept">[Concept Summary]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trace-flow">
+                        <div class="trace-tier">
+                            <div class="tier-badge">T2</div>
+                            <div class="tier-info">
+                                <h5>Components &amp; Hardware</h5>
+                                <div class="tier-field"><strong>Supplier:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Material / Component:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T1</div>
+                            <div class="tier-info">
+                                <h5>Manufacturing &amp; Assembly</h5>
+                                <div class="tier-field"><strong>Manufacturer:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Process Details:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T0</div>
+                            <div class="tier-info">
+                                <h5>Retail &amp; Customer</h5>
+                                <div class="tier-field"><strong>Retail Channel:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Locations:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Customer Experience:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- TIER 3 - TEXTILE MILLS - EDIT HERE -->
-                <div class="tier-card">
-                    <div class="tier-header">
-                        <span class="tier-number">T3</span>
-                        <h3>Fabric &amp; Textile Mills</h3>
-                    </div>
-                    <div class="tier-content">
-                        <div class="tier-image">
+                <!-- Chaeyoung Shim's Product Traceability -->
+                <div class="trace-block">
+                    <div class="trace-product">
+                        <div class="trace-product-image">
                             <div class="image-placeholder">
-                                <p>Tier 3 Image</p>
-                                <span>images/supply-chain/tier-3.jpg</span>
+                                <p>Product Image</p>
+                                <span>images/traceability/chaeyoung.jpg</span>
                             </div>
                         </div>
-                        <div class="tier-details">
-                            <!-- EDIT TIER 3 DETAILS HERE -->
-                            <div class="detail-row">
-                                <strong>Supplier:</strong>
-                                <span>Lesage (CHANEL Metiers d'Art)</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Location:</strong>
-                                <span>Paris, France</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Materials:</strong>
-                                <span>Signature Tweed, Embroidered Fabrics</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Sustainability:</strong>
-                                <span>OEKO-TEX certified, zero-waste cutting</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Craftsmanship:</strong>
-                                <span>Artisan embroidery house since 1924</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Circular Connection:</strong>
-                                <span>Fabric scraps repurposed for accessories</span>
-                            </div>
-                            <div class="detail-row reference">
-                                <strong>APA Reference:</strong>
-                                <span>[Author. (Year). Title. Source.]</span>
-                            </div>
+                        <div class="trace-product-info">
+                            <h4 class="trace-designer">Chaeyoung Shim</h4>
+                            <p class="trace-product-name">[Selected Product Name]</p>
+                            <p class="trace-category">[Category]</p>
+                            <p class="trace-concept">[Concept Summary]</p>
                         </div>
                     </div>
-                    <div class="tier-connector">
-                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
-                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
-                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- TIER 2 - COMPONENTS - EDIT HERE -->
-                <div class="tier-card">
-                    <div class="tier-header">
-                        <span class="tier-number">T2</span>
-                        <h3>Components &amp; Hardware</h3>
-                    </div>
-                    <div class="tier-content">
-                        <div class="tier-image">
-                            <div class="image-placeholder">
-                                <p>Tier 2 Image</p>
-                                <span>images/supply-chain/tier-2.jpg</span>
+                    
+                    <div class="trace-flow">
+                        <div class="trace-tier">
+                            <div class="tier-badge">T2</div>
+                            <div class="tier-info">
+                                <h5>Components &amp; Hardware</h5>
+                                <div class="tier-field"><strong>Supplier:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Material / Component:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
                             </div>
                         </div>
-                        <div class="tier-details">
-                            <!-- EDIT TIER 2 DETAILS HERE -->
-                            <div class="detail-row">
-                                <strong>Supplier:</strong>
-                                <span>Desrues (CHANEL Metiers d'Art)</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Location:</strong>
-                                <span>Paris, France</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Components:</strong>
-                                <span>Buttons, Chains, CC Hardware, Zippers</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Sustainability:</strong>
-                                <span>Recycled brass, responsible gold sourcing (RJC)</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Craftsmanship:</strong>
-                                <span>Button makers since 1929, hand-finishing</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Circular Connection:</strong>
-                                <span>Hardware designed for lifetime durability</span>
-                            </div>
-                            <div class="detail-row reference">
-                                <strong>APA Reference:</strong>
-                                <span>[Author. (Year). Title. Source.]</span>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T1</div>
+                            <div class="tier-info">
+                                <h5>Manufacturing &amp; Assembly</h5>
+                                <div class="tier-field"><strong>Manufacturer:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Country of Origin:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Process Details:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tier-connector">
-                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
-                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
-                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- TIER 1 - MANUFACTURING - EDIT HERE -->
-                <div class="tier-card">
-                    <div class="tier-header">
-                        <span class="tier-number">T1</span>
-                        <h3>Manufacturing &amp; Assembly</h3>
-                    </div>
-                    <div class="tier-content">
-                        <div class="tier-image">
-                            <div class="image-placeholder">
-                                <p>Tier 1 Image</p>
-                                <span>images/supply-chain/tier-1.jpg</span>
-                            </div>
-                        </div>
-                        <div class="tier-details">
-                            <!-- EDIT TIER 1 DETAILS HERE -->
-                            <div class="detail-row">
-                                <strong>Manufacturer:</strong>
-                                <span>CHANEL Ateliers</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Location:</strong>
-                                <span>Paris &amp; Aubervilliers, France</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Production:</strong>
-                                <span>Hand-tailored garments, hand-stitched bags</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Sustainability:</strong>
-                                <span>Solar-powered facilities, carbon neutral by 2025</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Craftsmanship:</strong>
-                                <span>Master artisans, 15-20 hours per jacket</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Circular Connection:</strong>
-                                <span>Built for repair, modular construction</span>
-                            </div>
-                            <div class="detail-row reference">
-                                <strong>APA Reference:</strong>
-                                <span>[Author. (Year). Title. Source.]</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tier-connector">
-                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor">
-                            <path d="M12 0 L12 48" stroke-width="1" stroke-dasharray="4 4"/>
-                            <path d="M6 42 L12 48 L18 42" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- TIER 0 - RETAIL - EDIT HERE -->
-                <div class="tier-card tier-final">
-                    <div class="tier-header">
-                        <span class="tier-number">T0</span>
-                        <h3>Retail &amp; Customer Experience</h3>
-                    </div>
-                    <div class="tier-content">
-                        <div class="tier-image">
-                            <div class="image-placeholder">
-                                <p>Tier 0 Image</p>
-                                <span>images/supply-chain/tier-0.jpg</span>
-                            </div>
-                        </div>
-                        <div class="tier-details">
-                            <!-- EDIT TIER 0 CUSTOMER EXPERIENCE HERE -->
-                            <div class="detail-row">
-                                <strong>Channel:</strong>
-                                <span>CHANEL Boutiques Worldwide</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Locations:</strong>
-                                <span>310+ boutiques, 40+ countries</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Experience:</strong>
-                                <span>Personal styling, heritage storytelling, care education</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Sustainability:</strong>
-                                <span>Sustainable packaging, digital receipts</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Service:</strong>
-                                <span>Lifetime care program, authentication services</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Circular Connection:</strong>
-                                <span>Repair services, resale authentication, archive program</span>
-                            </div>
-                            <div class="detail-row reference">
-                                <strong>APA Reference:</strong>
-                                <span>[Author. (Year). Title. Source.]</span>
+                        <div class="tier-connector-vertical"></div>
+                        <div class="trace-tier">
+                            <div class="tier-badge">T0</div>
+                            <div class="tier-info">
+                                <h5>Retail &amp; Customer</h5>
+                                <div class="tier-field"><strong>Retail Channel:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Locations:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Customer Experience:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Sustainability &amp; Circular Strategy:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field"><strong>Why Selected:</strong> <span>[Edit]</span></div>
+                                <div class="tier-field reference"><strong>APA Reference:</strong> <span>[Edit]</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- ====================================================
-         8. CIRCULAR ECONOMY STRATEGY
+         9. CIRCULAR ECONOMY STRATEGY
          ==================================================== -->
-    <section class="section" id="circular">
+    <section class="section section-dark" id="circular">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow">Sustainability</p>
                 <h2 class="section-title">Circular Economy Strategy</h2>
             </div>
 
-            <!-- EDIT CIRCULAR QUOTE HERE -->
             <div class="circular-quote">
                 <blockquote>
                     "True luxury is not disposable. It is designed to endure, 
@@ -1019,8 +895,6 @@
 
             <!-- Circular Pillars -->
             <div class="circular-grid">
-                <!-- EDIT CIRCULAR PILLARS HERE -->
-                
                 <div class="circular-pillar">
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1097,7 +971,6 @@
 
             <!-- Statistics Section -->
             <div class="circular-stats">
-                <!-- EDIT STATISTICS HERE -->
                 <div class="stat-card">
                     <p class="stat-number">15-20</p>
                     <p class="stat-label">Hours of craftsmanship per jacket</p>
@@ -1115,112 +988,100 @@
     </section>
 
     <!-- ====================================================
-         9. ABOUT US / TEAM
+         10. ABOUT US / TEAM
          ==================================================== -->
-    <section class="section section-alt" id="about">
+    <section class="section" id="about">
         <div class="container">
             <div class="section-header">
                 <p class="section-eyebrow">Team</p>
                 <h2 class="section-title">About Us</h2>
-                <p class="section-subtitle">FIT SUNY Korea | Fashion Business Management</p>
+                <p class="section-subtitle">FIT SUNY Korea | FM109 First Year Experience II</p>
             </div>
-
-            <!-- 
-                IMAGE FOLDER STRUCTURE:
-                images/
-                └── team/
-                    ├── member-1.jpg
-                    ├── member-2.jpg
-                    ├── member-3.jpg
-                    ├── member-4.jpg
-                    └── member-5.jpg
-            -->
 
             <div class="team-grid">
                 
-                <!-- TEAM MEMBER 1 - EDIT HERE -->
+                <!-- Juha Kim -->
                 <div class="team-card">
                     <div class="team-image">
                         <div class="image-placeholder">
                             <p>Photo</p>
-                            <span>images/team/member-1.jpg</span>
+                            <span>images/team/juha.jpg</span>
                         </div>
-                        <!-- Replace placeholder with: <img src="images/team/member-1.jpg" alt="Team member name"> -->
+                        <!-- Replace with: <img src="images/team/juha.jpg" alt="Juha Kim"> -->
                     </div>
                     <div class="team-info">
-                        <!-- EDIT TEAM MEMBER INFO HERE -->
-                        <h4 class="team-name">[First Name]</h4>
-                        <p class="team-keyword">Strategy</p>
-                        <p class="team-role">Project Lead / Research</p>
-                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <h4 class="team-name">Juha Kim</h4>
+                        <p class="team-keyword">Leadership</p>
+                        <p class="team-role">Team Leader / Website / Brand Strategy</p>
+                        <p class="team-bio">Led team coordination, website development, and overall project direction.</p>
                         <a href="#" class="team-linkedin">LinkedIn</a>
                     </div>
                 </div>
 
-                <!-- TEAM MEMBER 2 - EDIT HERE -->
+                <!-- Jisoo Lee -->
                 <div class="team-card">
                     <div class="team-image">
                         <div class="image-placeholder">
                             <p>Photo</p>
-                            <span>images/team/member-2.jpg</span>
+                            <span>images/team/jisoo.jpg</span>
                         </div>
                     </div>
                     <div class="team-info">
-                        <h4 class="team-name">[First Name]</h4>
-                        <p class="team-keyword">Creative</p>
-                        <p class="team-role">Visual Design / Moodboard</p>
-                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <h4 class="team-name">Jisoo Lee</h4>
+                        <p class="team-keyword">Research</p>
+                        <p class="team-role">PPT Creator / Research</p>
+                        <p class="team-bio">Contributed category research, product analysis, and presentation development.</p>
                         <a href="#" class="team-linkedin">LinkedIn</a>
                     </div>
                 </div>
 
-                <!-- TEAM MEMBER 3 - EDIT HERE -->
+                <!-- Diane Kim -->
                 <div class="team-card">
                     <div class="team-image">
                         <div class="image-placeholder">
                             <p>Photo</p>
-                            <span>images/team/member-3.jpg</span>
+                            <span>images/team/diane.jpg</span>
                         </div>
                     </div>
                     <div class="team-info">
-                        <h4 class="team-name">[First Name]</h4>
-                        <p class="team-keyword">Sustainability</p>
-                        <p class="team-role">Supply Chain Research</p>
-                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <h4 class="team-name">Diane Kim</h4>
+                        <p class="team-keyword">Development</p>
+                        <p class="team-role">PPT Creator / Research</p>
+                        <p class="team-bio">Developed product research and supported visual presentation materials.</p>
                         <a href="#" class="team-linkedin">LinkedIn</a>
                     </div>
                 </div>
 
-                <!-- TEAM MEMBER 4 - EDIT HERE -->
+                <!-- Alex Moon -->
                 <div class="team-card">
                     <div class="team-image">
                         <div class="image-placeholder">
                             <p>Photo</p>
-                            <span>images/team/member-4.jpg</span>
+                            <span>images/team/alex.jpg</span>
                         </div>
                     </div>
                     <div class="team-info">
-                        <h4 class="team-name">[First Name]</h4>
-                        <p class="team-keyword">Product</p>
-                        <p class="team-role">Product Development</p>
-                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <h4 class="team-name">Alex Moon</h4>
+                        <p class="team-keyword">Concept</p>
+                        <p class="team-role">PPT Creator / Research</p>
+                        <p class="team-bio">Contributed category research, product concept development, and presentation content.</p>
                         <a href="#" class="team-linkedin">LinkedIn</a>
                     </div>
                 </div>
 
-                <!-- TEAM MEMBER 5 - DUPLICATE OR REMOVE AS NEEDED -->
+                <!-- Chaeyoung Shim -->
                 <div class="team-card">
                     <div class="team-image">
                         <div class="image-placeholder">
                             <p>Photo</p>
-                            <span>images/team/member-5.jpg</span>
+                            <span>images/team/chaeyoung.jpg</span>
                         </div>
                     </div>
                     <div class="team-info">
-                        <h4 class="team-name">[First Name]</h4>
-                        <p class="team-keyword">Marketing</p>
-                        <p class="team-role">Brand Strategy</p>
-                        <p class="team-bio">Brief description of contribution to the project and area of focus.</p>
+                        <h4 class="team-name">Chaeyoung Shim</h4>
+                        <p class="team-keyword">Detail</p>
+                        <p class="team-role">PPT Creator / Research</p>
+                        <p class="team-bio">Developed accessories research and supported presentation storytelling.</p>
                         <a href="#" class="team-linkedin">LinkedIn</a>
                     </div>
                 </div>
@@ -1229,7 +1090,7 @@
     </section>
 
     <!-- ====================================================
-         10. FOOTER
+         11. FOOTER
          ==================================================== -->
     <footer class="footer">
         <div class="container">
@@ -1239,14 +1100,15 @@
                     <p class="footer-tagline">Spring 2027 | Timeless Circular Luxury</p>
                 </div>
                 <div class="footer-info">
+                    <p>FM109 First Year Experience II</p>
+                    <p>Professor Hye Yeon Jeong</p>
                     <p>FIT SUNY Korea</p>
-                    <p>Fashion Business Management</p>
-                    <p>Final Project 2027</p>
+                    <p>Brand/Retailer &amp; Product Lifecycle Analysis</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>This is an academic project for educational purposes only.</p>
-                <p>CHANEL is a registered trademark of CHANEL S.A.</p>
+                <p class="footer-disclaimer">This website is an academic project created for educational purposes only and is not affiliated with Chanel S.A.S.</p>
+                <p class="footer-copyright">CHANEL Spring 2027 Final Project</p>
             </div>
         </div>
     </footer>

@@ -1245,7 +1245,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return '<div class="product-card">' +
             '<div class="product-image">' +
-                '<img src="' + product.imagePath + '" alt="' + product.itemName + '" onerror="this.onerror=null; this.parentElement.innerHTML=\'<div class=image-placeholder><p>' + product.itemName.replace(/'/g, "\\'") + '</p></div>\';">' +
+                '<img src="' + product.imagePath + '" alt="' + product.itemName + '" onerror="this.onerror=null; this.parentElement.innerHTML=\'<div class=image-placeholder><p>Image Coming Soon</p></div>\';">' +
             '</div>' +
             '<div class="product-details">' +
                 '<span class="product-heritage-tag">' + keyword + '</span>' +
@@ -1301,12 +1301,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 '<p class="category-hero-count">' + productCount + ' Products</p>' +
                 '<p class="category-hero-description">' + info.description + '</p>' +
                 '<div class="category-hero-keywords">' + keywordsHtml + '</div>' +
-            '</div>' +
-            '<div class="category-hero-image">' +
-                '<div class="image-placeholder">' +
-                    '<p>' + category + '</p>' +
-                    '<span>images/categories/' + categoryToKey(category) + '.jpg</span>' +
-                '</div>' +
             '</div>' +
         '</div>';
     }

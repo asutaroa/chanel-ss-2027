@@ -991,14 +991,13 @@ p {
 
 /* Category Hero Card */
 .category-hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
-    padding: 3rem;
+    display: block;
+    margin-bottom: 3rem;
+    padding: 2.5rem 3rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
+    text-align: center;
 }
 
 .category-hero::before {
@@ -1043,6 +1042,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    justify-content: center;
 }
 
 .heritage-keyword {
@@ -1053,24 +1053,6 @@ p {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--barely-pink);
-}
-
-.category-hero-image {
-    aspect-ratio: 4/3;
-    background: linear-gradient(135deg, rgba(240, 215, 216, 0.1) 0%, rgba(221, 232, 232, 0.1) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-}
-
-.category-hero-image .image-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-gray);
-    text-align: center;
 }
 
 /* Product Grid */
@@ -1096,16 +1078,21 @@ p {
 }
 
 .product-image {
-    height: 250px;
+    height: 320px;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: var(--transition-smooth);
+    background: #fff;
 }
 
 .product-card:hover .product-image img {
@@ -1119,20 +1106,16 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--color-gray);
+    color: #999;
     text-align: center;
     padding: 1rem;
+    background: #fff;
 }
 
 .product-image .image-placeholder p {
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-}
-
-.product-image .image-placeholder span {
-    font-size: 0.65rem;
-    font-family: monospace;
-    opacity: 0.6;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #999;
 }
 
 .product-details {
@@ -1714,14 +1697,6 @@ p {
 @media (max-width: 1200px) {
     .palette-grid {
         grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .category-hero {
-        grid-template-columns: 1fr;
-    }
-    
-    .category-hero-image {
-        max-height: 300px;
     }
 }
 

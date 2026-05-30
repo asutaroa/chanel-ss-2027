@@ -813,18 +813,21 @@ p {
 
 .chart-bar {
     width: 70px;
-    background: var(--snow-white);
+    height: 200px;
+    background: var(--ice-castle);
     border-radius: 6px 6px 0 0;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
 .chart-bar-fill {
     width: 100%;
-    height: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
     background: linear-gradient(180deg, var(--scarlet-sage) 0%, var(--clematis-blue) 100%);
-    transform-origin: bottom;
-    animation: barGrow 1.5s ease-out forwards;
+    transition: height 1.5s ease-out;
 }
 
 .chart-bar-wrapper:nth-child(2) .chart-bar-fill {
@@ -2180,9 +2183,7 @@ p {
         grid-template-columns: repeat(4, 1fr);
     }
     
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    /* Keep team grid at 5 columns on wider screens */
 }
 
 /* Tablets */
@@ -2232,7 +2233,8 @@ p {
     }
     
     .team-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
     }
     
     .financial-grid {
@@ -2323,8 +2325,9 @@ p {
         height: 100px;
     }
     
+    /* Team stays at 5 columns on tablets, goes to 2 on mobile */
     .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
     
@@ -2393,6 +2396,13 @@ p {
     }
 }
 
+/* Small Tablets - 5 team members need more space */
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Small Mobile */
 @media (max-width: 480px) {
     .team-grid {
@@ -2409,6 +2419,24 @@ p {
     
     .hero-motif {
         display: none;
+    }
+    
+    .chart-bars {
+        flex-direction: column;
+        height: auto;
+        gap: 1.5rem;
+    }
+    
+    .chart-bar {
+        width: 100%;
+        height: 60px;
+    }
+    
+    .chart-bar-fill {
+        height: 100% !important;
+        width: 0;
+        bottom: auto;
+        left: 0;
     }
 }
 

@@ -1207,7 +1207,9 @@ p {
 .journey-stage:nth-child(3) .stage-number { background: var(--clematis-blue); }
 .journey-stage:nth-child(4) .stage-number { background: linear-gradient(135deg, var(--scarlet-sage), var(--clematis-blue)); }
 .journey-stage:nth-child(5) .stage-number { background: linear-gradient(135deg, var(--emerald), var(--clematis-blue)); }
-.journey-stage:nth-child(6) .stage-number { background: linear-gradient(135deg, var(--clematis-blue), var(--scarlet-sage)); }
+.journey-stage:nth-child(6) .stage-number { background: var(--scarlet-sage); }
+.journey-stage:nth-child(7) .stage-number { background: var(--emerald); }
+.journey-stage:nth-child(8) .stage-number { background: var(--clematis-blue); }
 
 .stage-content {
     flex: 1;
@@ -1221,9 +1223,11 @@ p {
 .journey-stage:nth-child(1) .stage-content { border-left-color: var(--scarlet-sage); }
 .journey-stage:nth-child(2) .stage-content { border-left-color: var(--emerald); }
 .journey-stage:nth-child(3) .stage-content { border-left-color: var(--clematis-blue); }
-.journey-stage:nth-child(4) .stage-content { border-left-color: var(--pastel-yellow); border-left-width: 6px; }
-.journey-stage:nth-child(5) .stage-content { border-left-color: var(--barely-pink); border-left-width: 6px; }
-.journey-stage:nth-child(6) .stage-content { border-left-color: var(--ice-castle); border-left-width: 6px; }
+.journey-stage:nth-child(4) .stage-content { border-left-color: var(--scarlet-sage); }
+.journey-stage:nth-child(5) .stage-content { border-left-color: var(--emerald); }
+.journey-stage:nth-child(6) .stage-content { border-left-color: var(--scarlet-sage); }
+.journey-stage:nth-child(7) .stage-content { border-left-color: var(--emerald); }
+.journey-stage:nth-child(8) .stage-content { border-left-color: var(--clematis-blue); }
 
 .stage-content h4 {
     color: var(--tap-shoe);
@@ -1265,7 +1269,7 @@ p {
     );
 }
 
-/* Category Tabs */
+/* Category Tabs - Luxury Styled */
 .category-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -1275,21 +1279,39 @@ p {
 }
 
 .category-tab {
-    padding: 1rem 2rem;
-    font-size: 0.8rem;
+    padding: 14px 28px;
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     background: var(--snow-white);
     color: var(--tap-shoe);
     border: 2px solid var(--tap-shoe);
-    border-radius: 8px;
+    border-radius: 999px;
     cursor: pointer;
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
-    min-width: 140px;
+    min-width: 160px;
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.category-tab .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: var(--ice-castle);
+    color: var(--tap-shoe);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: var(--transition-smooth);
 }
 
 .category-tab::before {
@@ -1309,14 +1331,110 @@ p {
     border-color: var(--scarlet-sage);
     color: var(--scarlet-sage);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(157, 32, 47, 0.2);
+    box-shadow: 0 8px 25px rgba(157, 32, 47, 0.25);
+}
+
+.category-tab:hover .count {
+    background: rgba(157, 32, 47, 0.15);
+    color: var(--scarlet-sage);
 }
 
 .category-tab.active {
     background: linear-gradient(135deg, var(--scarlet-sage), var(--clematis-blue));
     color: var(--snow-white);
     border-color: transparent;
-    box-shadow: 0 6px 25px rgba(157, 32, 47, 0.35);
+    box-shadow: 0 8px 30px rgba(157, 32, 47, 0.4);
+    transform: translateY(-2px);
+}
+
+.category-tab.active .count {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--snow-white);
+}
+
+/* Category Navigation Buttons - Luxury Styled */
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.category-btn {
+    padding: 14px 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--snow-white);
+    color: var(--tap-shoe);
+    border: 2px solid var(--tap-shoe);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    min-width: 160px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: inherit;
+}
+
+.category-btn .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 6px;
+    background: var(--ice-castle);
+    color: var(--tap-shoe);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+}
+
+.category-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--mop-shimmer);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-btn:hover::before {
+    opacity: 0.3;
+}
+
+.category-btn:hover {
+    border-color: var(--scarlet-sage);
+    color: var(--scarlet-sage);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(157, 32, 47, 0.25);
+}
+
+.category-btn:hover .count {
+    background: rgba(157, 32, 47, 0.15);
+    color: var(--scarlet-sage);
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, var(--scarlet-sage), var(--clematis-blue));
+    color: var(--snow-white);
+    border-color: transparent;
+    box-shadow: 0 8px 30px rgba(157, 32, 47, 0.4);
+    transform: translateY(-2px);
+}
+
+.category-btn.active .count {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--snow-white);
 }
 
 /* Category Hero Card */
@@ -1578,7 +1696,7 @@ p {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 /* ====================================================
-   8. TRACEABILITY - Emerald + Snow White
+   8. TRACEABILITY - Chain-Style Layout
    ==================================================== */
 #traceability {
     background: linear-gradient(180deg, 
@@ -1618,13 +1736,14 @@ p {
     line-height: 1.85;
 }
 
-/* Trace Block */
-.trace-blocks {
+/* Traceability Grid */
+.traceability-grid {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
+/* Trace Block */
 .trace-block {
     background: var(--snow-white);
     border-radius: 16px;
@@ -1644,6 +1763,7 @@ p {
     background: linear-gradient(90deg, var(--emerald), var(--clematis-blue), var(--scarlet-sage));
 }
 
+/* Product Header */
 .trace-product {
     display: flex;
     gap: 1.5rem;
@@ -1654,8 +1774,8 @@ p {
 }
 
 .trace-product-image {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
@@ -1683,139 +1803,224 @@ p {
 .trace-product-image .image-placeholder p {
     font-style: italic;
     color: var(--clematis-blue);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 .trace-product-info {
     flex: 1;
 }
 
-.trace-product-info h4 {
+.trace-designer {
     color: var(--tap-shoe);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.trace-product-info p {
-    color: var(--tap-shoe);
-    margin-bottom: 0.35rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.trace-owner {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    background: linear-gradient(135deg, var(--clematis-blue), var(--scarlet-sage));
-    color: var(--snow-white);
-    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+}
+
+.trace-product-name {
+    color: var(--scarlet-sage);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.trace-category {
+    color: var(--clematis-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
-    border-radius: 4px;
-    margin-top: 0.5rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
 }
 
-/* Tier Timeline - Horizontal on Desktop */
-.trace-tiers {
+.trace-concept {
+    color: var(--tap-shoe);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    opacity: 0.85;
+}
+
+/* Chain Flow - Horizontal Layout */
+.trace-flow {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 0;
+    align-items: stretch;
 }
 
+/* Tier Cards */
 .trace-tier {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    background: var(--snow-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--ice-castle);
 }
 
 .tier-badge {
-    width: 100%;
-    height: auto;
-    padding: 0.75rem;
-    border-radius: 8px 8px 0 0;
+    padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    flex-shrink: 0;
     color: var(--snow-white);
     font-weight: 700;
-}
-
-.tier-badge span:first-child {
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.9;
-}
-
-.tier-badge span:last-child {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
 }
 
 .tier-2 .tier-badge { background: var(--emerald); }
 .tier-1 .tier-badge { background: var(--clematis-blue); }
 .tier-0 .tier-badge { background: var(--scarlet-sage); }
 
-.tier-content {
+.tier-info {
     flex: 1;
-    padding: 1.25rem;
-    background: var(--ice-castle);
-    border-radius: 0 0 8px 8px;
-    border-top: none;
+    padding: 1rem;
+    background: rgba(245, 245, 245, 0.5);
 }
 
-.tier-2 .tier-content { border-left: 3px solid var(--emerald); }
-.tier-1 .tier-content { border-left: 3px solid var(--clematis-blue); }
-.tier-0 .tier-content { border-left: 3px solid var(--scarlet-sage); }
-
-.tier-content h5 {
-    font-size: 0.95rem;
+.tier-info h5 {
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--tap-shoe);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--ice-castle);
+}
+
+/* Tier Fields - Stacked Layout */
+.tier-field {
     margin-bottom: 0.75rem;
 }
 
-.tier-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.tier-field:last-child {
+    margin-bottom: 0;
 }
 
-.tier-detail {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 8px;
-    align-items: start;
-}
-
-.tier-detail-label {
-    font-size: 0.6rem;
+.tier-field strong {
+    display: block;
+    font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--clematis-blue);
+    margin-bottom: 0.2rem;
 }
 
-.tier-detail-value {
+.tier-2 .tier-field strong { color: var(--emerald); }
+.tier-1 .tier-field strong { color: var(--clematis-blue); }
+.tier-0 .tier-field strong { color: var(--scarlet-sage); }
+
+.tier-field span {
+    display: block;
     font-size: 0.8rem;
     color: var(--tap-shoe);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-.tier-reference {
+.tier-field.reference {
     margin-top: 0.75rem;
     padding-top: 0.75rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.tier-reference p {
+.tier-field.reference span {
     font-size: 0.7rem;
-    color: var(--tap-shoe);
-    opacity: 0.7;
     font-style: italic;
-    line-height: 1.4;
+    opacity: 0.75;
+    line-height: 1.45;
+}
+
+/* Connector Arrows */
+.tier-connector-vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    position: relative;
+}
+
+.tier-connector-vertical::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--emerald), var(--clematis-blue), var(--scarlet-sage));
+    transform: translateY(-50%);
+}
+
+.tier-connector-vertical::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid var(--clematis-blue);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    transform: translateY(-50%);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .trace-flow {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .tier-connector-vertical {
+        width: 100%;
+        height: 40px;
+    }
+    
+    .tier-connector-vertical::before {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        width: 3px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    
+    .tier-connector-vertical::after {
+        top: auto;
+        bottom: 8px;
+        left: 50%;
+        right: auto;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid var(--clematis-blue);
+        border-bottom: none;
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .trace-product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .trace-product-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .tier-info {
+        padding: 0.85rem;
+    }
+    
+    .tier-field span {
+        font-size: 0.75rem;
+    }
 }
 
 /* ====================================================
@@ -2308,12 +2513,17 @@ p {
     }
     
     .trace-product-image {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
     
-    .trace-tiers {
+    .trace-flow {
         grid-template-columns: 1fr;
+    }
+    
+    .tier-connector-vertical {
+        width: 100%;
+        height: 35px;
     }
     
     .products-grid,
@@ -2446,16 +2656,36 @@ p {
         height: 45px;
     }
     
-    .trace-tier {
-        flex-direction: column;
+    .trace-flow {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
     
-    .tier-badge {
+    .tier-connector-vertical {
         width: 100%;
-        height: 50px;
-        flex-direction: row;
-        gap: 0.5rem;
-        border-radius: 8px;
+        height: 30px;
+    }
+    
+    .tier-connector-vertical::before {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        width: 3px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+    
+    .tier-connector-vertical::after {
+        top: auto;
+        bottom: 5px;
+        left: 50%;
+        right: auto;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 8px solid var(--clematis-blue);
+        border-bottom: none;
+        transform: translateX(-50%);
     }
     
     .circular-pillars {

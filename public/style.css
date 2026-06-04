@@ -1093,15 +1093,27 @@ p {
 
 .moodboard-single {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
+.moodboard-single:last-child {
+    margin-bottom: 0;
+}
+
+.moodboard-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--tap-shoe);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
 .moodboard-wrapper {
     position: relative;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 
         0 20px 60px rgba(54, 59, 124, 0.15),
@@ -1109,6 +1121,7 @@ p {
         0 0 0 6px var(--scarlet-sage),
         0 0 0 8px var(--emerald),
         0 0 0 10px var(--clematis-blue);
+    background: var(--snow-white);
 }
 
 .moodboard-wrapper img,
@@ -1117,18 +1130,36 @@ p {
     height: auto;
     display: block;
     transition: transform 0.6s ease;
+    object-fit: contain;
 }
 
 .moodboard-wrapper:hover img {
     transform: scale(1.02);
 }
 
-.moodboard-caption {
+.moodboard-placeholder {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--barely-pink) 0%, var(--ice-castle) 100%);
+}
+
+.moodboard-placeholder p {
     font-family: var(--font-serif);
     font-size: 1.2rem;
     font-style: italic;
     color: var(--clematis-blue);
-    margin-top: 2rem;
+    opacity: 0.8;
+}
+
+.moodboard-caption {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--clematis-blue);
+    margin-top: 1.5rem;
 }
 
 /* ====================================================
@@ -1763,32 +1794,38 @@ p {
     background: linear-gradient(90deg, var(--emerald), var(--clematis-blue), var(--scarlet-sage));
 }
 
-/* Product Header */
+/* Product Header - Two-Row Layout */
 .trace-product {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
     border-bottom: 2px solid var(--ice-castle);
     align-items: flex-start;
 }
 
 .trace-product-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
+    width: 30%;
+    min-width: 200px;
+    max-width: 320px;
+    height: 340px;
+    border-radius: 16px;
     overflow: hidden;
     flex-shrink: 0;
-    background: var(--ice-castle);
+    background: var(--snow-white);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--ice-castle);
 }
 
 .trace-product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 1rem;
+    background: var(--snow-white);
 }
 
 .trace-product-image .image-placeholder {
@@ -1808,36 +1845,41 @@ p {
 
 .trace-product-info {
     flex: 1;
+    padding-top: 0.5rem;
 }
 
 .trace-designer {
     color: var(--tap-shoe);
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
 .trace-product-name {
     color: var(--scarlet-sage);
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .trace-category {
-    color: var(--clematis-blue);
-    font-size: 0.8rem;
-    font-weight: 600;
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background: linear-gradient(135deg, var(--clematis-blue), var(--scarlet-sage));
+    color: var(--snow-white);
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
 
 .trace-concept {
     color: var(--tap-shoe);
-    font-size: 0.85rem;
-    line-height: 1.55;
-    opacity: 0.85;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 600px;
 }
 
 /* Chain Flow - Horizontal Layout */
@@ -1855,20 +1897,21 @@ p {
     background: var(--snow-white);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--ice-castle);
+    min-height: 380px;
 }
 
 .tier-badge {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     color: var(--snow-white);
     font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
 }
 
 .tier-2 .tier-badge { background: var(--emerald); }
@@ -1877,22 +1920,22 @@ p {
 
 .tier-info {
     flex: 1;
-    padding: 1rem;
-    background: rgba(245, 245, 245, 0.5);
+    padding: 1.25rem 1.5rem;
+    background: rgba(250, 250, 250, 0.8);
 }
 
 .tier-info h5 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--tap-shoe);
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--ice-castle);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--ice-castle);
 }
 
 /* Tier Fields - Stacked Layout */
 .tier-field {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .tier-field:last-child {
@@ -1901,12 +1944,12 @@ p {
 
 .tier-field strong {
     display: block;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--clematis-blue);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.35rem;
 }
 
 .tier-2 .tier-field strong { color: var(--emerald); }
@@ -1915,9 +1958,10 @@ p {
 
 .tier-field span {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--tap-shoe);
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 280px;
 }
 
 .tier-field.reference {
@@ -2010,16 +2054,26 @@ p {
     }
     
     .trace-product-image {
-        width: 100px;
-        height: 100px;
+        width: 80%;
+        max-width: 280px;
+        height: 280px;
+    }
+    
+    .trace-product-info {
+        max-width: 100%;
+    }
+    
+    .trace-concept {
+        max-width: 100%;
     }
     
     .tier-info {
-        padding: 0.85rem;
+        padding: 1rem;
     }
     
     .tier-field span {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        max-width: 100%;
     }
 }
 
@@ -2090,22 +2144,28 @@ p {
     margin: 0;
 }
 
-/* Circular Pillars */
+/* Circular Pillars - Balanced Cards */
 .circular-pillars {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-bottom: 3rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .circular-pillar {
     padding: 2rem 1.5rem;
     background: var(--snow-white);
-    border-radius: 12px;
+    border-radius: 16px;
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
     transition: var(--transition-smooth);
     border-top: 5px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .circular-pillar:nth-child(1) { border-top-color: var(--scarlet-sage); }
@@ -2149,43 +2209,84 @@ p {
 .circular-pillar h4 {
     color: var(--tap-shoe);
     margin-bottom: 0.75rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .circular-pillar p {
     color: var(--tap-shoe);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.6;
+    max-width: 220px;
 }
 
-/* Circular Stats */
+/* Circular Stats - Visual Cards with Icons */
 .circular-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 900px;
+    gap: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.circular-stat {
+.stat-card {
     text-align: center;
-    padding: 1.5rem;
-    background: var(--snow-white);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 2.5rem 2rem;
+    background: linear-gradient(180deg, var(--snow-white), rgba(210, 226, 227, 0.3));
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(210, 226, 227, 0.5);
+    transition: var(--transition-smooth);
 }
 
-.circular-stat-value {
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--mop-shimmer), var(--barely-pink));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--scarlet-sage);
+}
+
+.stat-card:nth-child(1) .stat-icon svg { stroke: var(--scarlet-sage); }
+.stat-card:nth-child(2) .stat-icon svg { stroke: var(--emerald); }
+.stat-card:nth-child(3) .stat-icon svg { stroke: var(--clematis-blue); }
+
+.stat-number {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
-    color: var(--scarlet-sage);
+    color: var(--tap-shoe);
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
-.circular-stat-label {
+.stat-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--tap-shoe);
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.stat-desc {
     font-size: 0.85rem;
     color: var(--tap-shoe);
+    opacity: 0.7;
     line-height: 1.4;
 }
 
@@ -2513,8 +2614,9 @@ p {
     }
     
     .trace-product-image {
-        width: 100px;
-        height: 100px;
+        width: 90%;
+        max-width: 260px;
+        height: 260px;
     }
     
     .trace-flow {
@@ -2635,11 +2737,12 @@ p {
     }
     
     .circular-pillars {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .circular-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
     
     .journey-timeline::before {
@@ -2690,6 +2793,20 @@ p {
     
     .circular-pillars {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .circular-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
     }
     
     .footer-heritage {

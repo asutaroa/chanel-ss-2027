@@ -2147,17 +2147,21 @@ p {
 /* Circular Pillars - 6 Compact Cards in One Row */
 .circular-pillars {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    gap: 18px;
     margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .circular-pillar {
-    padding: 1.25rem 1rem;
-    background: var(--snow-white);
-    border-radius: 12px;
+    min-height: 260px;
+    padding: 24px 18px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     transition: var(--transition-smooth);
     border-top: 4px solid;
     display: flex;
@@ -2178,14 +2182,14 @@ p {
 }
 
 .pillar-icon {
-    width: 45px;
-    height: 45px;
-    margin: 0 auto 0.75rem;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .circular-pillar:nth-child(1) .pillar-icon { 
@@ -2215,15 +2219,18 @@ p {
 
 .circular-pillar h4 {
     color: var(--tap-shoe);
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    font-weight: 700;
 }
 
 .circular-pillar p {
     color: var(--tap-shoe);
-    font-size: 0.75rem;
-    line-height: 1.5;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    max-width: 180px;
+    opacity: 0.85;
 }
 
 /* Circular Stats - Visual Cards with Icons */
@@ -2642,7 +2649,8 @@ p {
     }
     
     .circular-pillars {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(140px, 1fr));
+        gap: 16px;
     }
     
     .circular-stats {
@@ -2745,7 +2753,13 @@ p {
     }
     
     .circular-pillars {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, minmax(130px, 1fr));
+        gap: 14px;
+    }
+    
+    .circular-pillar {
+        min-height: 240px;
+        padding: 20px 14px;
     }
     
     .circular-stats {
@@ -2805,7 +2819,17 @@ p {
     
     .circular-pillars {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
+        gap: 12px;
+    }
+    
+    .circular-pillar {
+        min-height: 220px;
+        padding: 18px 12px;
+    }
+    
+    .circular-pillar p {
+        max-width: 140px;
+        font-size: 0.75rem;
     }
     
     .circular-stats {

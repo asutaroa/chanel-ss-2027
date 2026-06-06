@@ -1190,7 +1190,7 @@ p {
 }
 
 .journey-timeline {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
     position: relative;
 }
@@ -1198,10 +1198,10 @@ p {
 .journey-timeline::before {
     content: '';
     position: absolute;
-    left: 60px;
+    left: 28px;
     top: 0;
     bottom: 0;
-    width: 4px;
+    width: 3px;
     background: linear-gradient(180deg, 
         var(--scarlet-sage) 0%, 
         var(--emerald) 33%, 
@@ -1213,42 +1213,47 @@ p {
 
 .journey-stage {
     display: flex;
-    gap: 2.5rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
     position: relative;
+    align-items: flex-start;
 }
 
 .stage-number {
-    width: 120px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--snow-white);
-    border-radius: 8px;
+    border-radius: 50%;
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--snow-white);
+    z-index: 1;
 }
 
 .journey-stage:nth-child(1) .stage-number { background: var(--scarlet-sage); }
 .journey-stage:nth-child(2) .stage-number { background: var(--emerald); }
 .journey-stage:nth-child(3) .stage-number { background: var(--clematis-blue); }
-.journey-stage:nth-child(4) .stage-number { background: linear-gradient(135deg, var(--scarlet-sage), var(--clematis-blue)); }
-.journey-stage:nth-child(5) .stage-number { background: linear-gradient(135deg, var(--emerald), var(--clematis-blue)); }
-.journey-stage:nth-child(6) .stage-number { background: var(--scarlet-sage); }
-.journey-stage:nth-child(7) .stage-number { background: var(--emerald); }
-.journey-stage:nth-child(8) .stage-number { background: var(--clematis-blue); }
+.journey-stage:nth-child(4) .stage-number { background: var(--scarlet-sage); }
+.journey-stage:nth-child(5) .stage-number { background: var(--emerald); }
+.journey-stage:nth-child(6) .stage-number { background: var(--clematis-blue); }
+.journey-stage:nth-child(7) .stage-number { background: var(--scarlet-sage); }
+.journey-stage:nth-child(8) .stage-number { background: var(--emerald); }
 
 .stage-content {
     flex: 1;
-    padding: 1.5rem 2rem;
+    max-width: 560px;
+    padding: 1.25rem 1.5rem;
     background: var(--snow-white);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     border-left: 4px solid;
+    margin-top: 4px;
 }
 
 .journey-stage:nth-child(1) .stage-content { border-left-color: var(--scarlet-sage); }
@@ -1256,19 +1261,22 @@ p {
 .journey-stage:nth-child(3) .stage-content { border-left-color: var(--clematis-blue); }
 .journey-stage:nth-child(4) .stage-content { border-left-color: var(--scarlet-sage); }
 .journey-stage:nth-child(5) .stage-content { border-left-color: var(--emerald); }
-.journey-stage:nth-child(6) .stage-content { border-left-color: var(--scarlet-sage); }
-.journey-stage:nth-child(7) .stage-content { border-left-color: var(--emerald); }
-.journey-stage:nth-child(8) .stage-content { border-left-color: var(--clematis-blue); }
+.journey-stage:nth-child(6) .stage-content { border-left-color: var(--clematis-blue); }
+.journey-stage:nth-child(7) .stage-content { border-left-color: var(--scarlet-sage); }
+.journey-stage:nth-child(8) .stage-content { border-left-color: var(--emerald); }
 
 .stage-content h4 {
     color: var(--tap-shoe);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
 }
 
 .stage-content p {
     color: var(--tap-shoe);
-    font-size: 0.95rem;
-    line-height: 1.75;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    max-width: 480px;
+    opacity: 0.85;
 }
 
 /* ====================================================
@@ -2635,13 +2643,13 @@ p {
     }
     
     .journey-timeline::before {
-        left: 40px;
+        left: 28px;
     }
     
     .stage-number {
-        width: 80px;
+        width: 50px;
         height: 50px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .trace-product {
@@ -2769,6 +2777,7 @@ p {
         min-width: auto;
     }
     
+    .circular-stats {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
@@ -2782,13 +2791,15 @@ p {
     }
     
     .journey-stage {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
+        align-items: flex-start;
     }
     
     .stage-number {
-        width: 100%;
-        height: 45px;
+        width: 44px;
+        height: 44px;
+        font-size: 0.9rem;
     }
     
     .trace-flow {

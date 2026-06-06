@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: "export",
+  basePath: "/chanel-ss-2027",
+  assetPrefix: "/chanel-ss-2027/",
   images: {
     unoptimized: true,
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

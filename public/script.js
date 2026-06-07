@@ -1049,25 +1049,77 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ====================================================
-    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // TAB / PAGE-VIEW NAVIGATION
     // ====================================================
-    
+    // Each nav item behaves like a tab: clicking it shows only the
+    // matching .site-view section and hides the rest. The URL hash is
+    // kept in sync so browser back/forward and deep links work.
+
+    const siteViews = document.querySelectorAll('.site-view');
+    const navAnchors = navMenu ? navMenu.querySelectorAll('a') : [];
+    const defaultViewId = 'hero';
+
+    function showView(viewId, updateHash) {
+        // Fall back to the hero/home view if the id is unknown.
+        let target = document.getElementById(viewId);
+        if (!target || !target.classList.contains('site-view')) {
+            viewId = defaultViewId;
+            target = document.getElementById(defaultViewId);
+        }
+        if (!target) return;
+
+        // Toggle section visibility.
+        siteViews.forEach(function(view) {
+            view.classList.toggle('active', view === target);
+        });
+
+        // Toggle active styling on the matching nav link.
+        navAnchors.forEach(function(link) {
+            const href = link.getAttribute('href') || '';
+            link.classList.toggle('active', href === '#' + viewId);
+        });
+
+        // Reset scroll position to the top of the new view.
+        window.scrollTo({ top: 0, behavior: 'auto' });
+
+        // Keep the navigation bar in its un-scrolled state on switch.
+        if (nav) {
+            nav.classList.remove('scrolled');
+        }
+
+        // Sync the URL hash without triggering a jump.
+        if (updateHash) {
+            const newHash = '#' + viewId;
+            if (window.location.hash !== newHash) {
+                history.pushState(null, '', newHash);
+            }
+        }
+    }
+
+    // Intercept clicks on any in-page hash link and switch views instead
+    // of scrolling. This covers the nav menu, the hero "Discover" link,
+    // and the back-to-top links.
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            const viewId = href.slice(1);
+            if (document.getElementById(viewId)) {
+                e.preventDefault();
+                showView(viewId, true);
             }
         });
     });
+
+    // Support browser back/forward navigation.
+    window.addEventListener('popstate', function() {
+        const viewId = window.location.hash.slice(1) || defaultViewId;
+        showView(viewId, false);
+    });
+
+    // On initial load: honor an existing hash, otherwise show Home.
+    const initialViewId = window.location.hash.slice(1) || defaultViewId;
+    showView(initialViewId, false);
     
     // ====================================================
     // SECTION FADE-IN ON SCROLL

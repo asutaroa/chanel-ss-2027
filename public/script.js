@@ -1047,7 +1047,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
+   
+    /*
     // ====================================================
     // SMOOTH SCROLL FOR ANCHOR LINKS
     // ====================================================
@@ -1068,7 +1069,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+    */
+   
     // ====================================================
     // SECTION FADE-IN ON SCROLL
     // ====================================================

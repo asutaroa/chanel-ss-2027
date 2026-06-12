@@ -1518,3 +1518,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("tab-mode");
+
+  const navLinks = document.querySelectorAll("[data-page]");
+  const sections = document.querySelectorAll("section");
+
+  function showPage(pageId) {
+    sections.forEach(section => {
+      section.classList.remove("active-page");
+    });
+
+    const target = document.getElementById(pageId);
+    if (target) {
+      target.classList.add("active-page");
+      window.scrollTo(0, 0);
+    }
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.dataset.page === pageId) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const pageId = this.dataset.page;
+      showPage(pageId);
+    });
+  });
+
+  showPage("hero");
+});

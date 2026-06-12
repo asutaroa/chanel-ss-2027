@@ -434,9 +434,12 @@ p {
 
 /* Hero Content */
 .hero-content {
-    max-width: 1000px;
     position: relative;
-    z-index: 1;
+    z-index: 5;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 160px 20px 100px;
+    text-align: center;
 }
 
 .hero-course-info {
@@ -502,12 +505,9 @@ p {
 }
 
 .hero-statement {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1.5rem 2rem;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    border: 1px solid rgba(157, 32, 47, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .hero-statement p {

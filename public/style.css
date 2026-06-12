@@ -3086,3 +3086,13 @@ p {
         padding: 2rem;
     }
 }
+.video-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  border-radius: 20px;
+  min-height: 700px;
+}

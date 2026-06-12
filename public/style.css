@@ -3096,3 +3096,18 @@ p {
   border-radius: 20px;
   min-height: 700px;
 }
+body.tab-mode section {
+  display: none;
+}
+
+body.tab-mode section.active-page {
+  display: block;
+}
+
+body.tab-mode .footer {
+  display: none;
+}
+
+body.tab-mode .footer.active-page {
+  display: block;
+}
